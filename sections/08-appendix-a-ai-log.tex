@@ -1,62 +1,112 @@
 \section{AI Use Log}
 \label{app:ailog}
 
-% Each task has its own block: edit only the task you are working on.
+% ---------------------------------------------------------------------
+% Layout: each task starts with a small table (tool + prompt), followed
+% by short paragraphs. Each task is separate: edit only your own task.
+% \aiprompt{Tool, version and date}{Prompt, pasted exactly}
+% ---------------------------------------------------------------------
+\newcommand{\aiprompt}[2]{%
+  \par\noindent
+  \begin{tabularx}{\linewidth}{@{}>{\bfseries}p{2.2cm}Y@{}}
+    \toprule
+    Tool   & #1 \\
+    Prompt & \itshape #2 \\
+    \bottomrule
+  \end{tabularx}\par\medskip}
 
+% =====================================================================
 \subsection{Task 1: Business Ecosystems}
-\begin{description}[style=nextline, leftmargin=0.5cm]
-  \item[Tool and version] GPT-5.6 Luna
-  \item[Prompt(s)] \textit{I am analyzing S3NS, a partnership between Thales and Google Cloud that provides trusted cloud for French public-sector and critical-infrastructure organistations. Identify the stakeholders, state each one's role, and describe the key relationships and dependencies between them. Keep the answer under 400 words.}
 
-  \item[Claims checked, and against what]
-  The core actors and roles are correct \parencite{s3ns2025premi3ns}. ``Majority shareholder'' is imprecise: S3NS is fully owned by Thales, with no disclosed Google equity.
+\aiprompt{GPT-5.6 Luna}{I am analyzing S3NS, a partnership between Thales and
+Google Cloud that provides trusted cloud for French public-sector and
+critical-infrastructure organistations. Identify the stakeholders, state each
+one's role, and describe the key relationships and dependencies between them.
+Keep the answer under 400 words.}
 
-  \item[Errors found and corrected]
-  \begin{enumerate}[leftmargin=*]
-    \item \textbf{Single-firm view.} The AI centred the ecosystem on S3NS as a hub. Using ecosystem-as-structure, we start from the alliance's value proposition instead \parencite{adner2017, windekilde2026ecosystem}.
-    \item \textbf{Dependency shown as balanced.} S3NS needs Google's technology, but Google does not need S3NS. This is a one-way, co-specialised complementarity \parencite{jacobides2018}. Every Google update must also be validated by S3NS before deployment \parencite{s3ns2025premi3ns}.
-    \item \textbf{Wrong motive for Google.} Google gains access to a market that requires immunity from non-European extraterritorial law, not ``security capabilities'' \parencite{s3ns2025premi3ns}. The French state was added as a stakeholder.
-  \end{enumerate}
+\paragraph{Claims checked.}
+The core actors and roles are correct \parencite{s3ns2025premi3ns}.
+``Majority shareholder'' is imprecise: S3NS is fully owned by Thales, with no
+disclosed Google equity.
 
-  \item[What it was good for / where it failed]
-  Useful as a quick first list of actors. It used no course concepts and did not explain how the alliance changes roles and incentives.
+\paragraph{Errors found and corrected.}
+\textit{(1) Single-firm view.} The AI centred the ecosystem on S3NS as a hub.
+Using ecosystem-as-structure, we start from the alliance's value proposition
+instead \parencite{adner2017, windekilde2026ecosystem}.
 
-  \item[Evidence still needed]
-  The terms of the Google--S3NS agreement, which are not public.
-\end{description}
+\textit{(2) Dependency shown as balanced.} S3NS needs Google's technology, but
+Google does not need S3NS. This is a one-way, co-specialised complementarity
+\parencite{jacobides2018}. Every Google update must also be validated by S3NS
+before deployment \parencite{s3ns2025premi3ns}.
 
+\textit{(3) Wrong motive for Google.} Google gains access to a market that
+requires immunity from non-European extraterritorial law, not ``security
+capabilities'' \parencite{s3ns2025premi3ns}. The French state was added as a
+stakeholder.
+
+\paragraph{Assessment.}
+Useful as a quick first list of actors. It used no course concepts and did not
+explain how the alliance changes roles and incentives.
+
+\paragraph{Evidence still needed.}
+The terms of the Google--S3NS agreement, which are not public.
+
+% =====================================================================
 \subsection{Task 2: Network Effects and Path Dependency}
-\begin{description}[style=nextline, leftmargin=0.5cm]
-  \item[Tool and version] \fillin{e.g. ChatGPT (GPT-x) / Claude (model), date used}
-  \item[Prompt(s)] \fillin{Paste exactly}
-  \item[Claims checked, and against what] \fillin{Textbook chapter, lecture, case source}
-  \item[Errors found and corrected] \fillin{Flaw $\rightarrow$ course concept $\rightarrow$ evidence $\rightarrow$ how the main text changed}
-  \item[What it was good for / where it failed] \fillin{2--3 sentences}
-\end{description}
 
+\aiprompt{\fillin{Tool, version, date}}{\fillin{Paste the prompt exactly}}
+
+\paragraph{Claims checked.}
+\fillin{What was checked, and against which chapter, lecture or case source}
+
+\paragraph{Errors found and corrected.}
+\fillin{For each error: the flaw, the course concept that exposes it, the
+evidence, and how the main text changed}
+
+\paragraph{Assessment.}
+\fillin{2--3 sentences: what it was good for and where it failed}
+
+% =====================================================================
 \subsection{Task 3: Multisided Platform Mapping}
-\begin{description}[style=nextline, leftmargin=0.5cm]
-  \item[Tool and version] \fillin{e.g. ChatGPT (GPT-x) / Claude (model), date used}
-  \item[Prompt(s)] \fillin{Paste exactly}
-  \item[Claims checked, and against what] \fillin{Textbook chapter, lecture, case source}
-  \item[Errors found and corrected] \fillin{Flaw $\rightarrow$ course concept $\rightarrow$ evidence $\rightarrow$ how the main text changed}
-  \item[What it was good for / where it failed] \fillin{2--3 sentences}
-\end{description}
 
+\aiprompt{\fillin{Tool, version, date}}{\fillin{Paste the prompt exactly}}
+
+\paragraph{Claims checked.}
+\fillin{What was checked, and against which chapter, lecture or case source}
+
+\paragraph{Errors found and corrected.}
+\fillin{For each error: the flaw, the course concept that exposes it, the
+evidence, and how the main text changed}
+
+\paragraph{Assessment.}
+\fillin{2--3 sentences: what it was good for and where it failed}
+
+% =====================================================================
 \subsection{Task 4: Cybersecurity Economics}
-\begin{description}[style=nextline, leftmargin=0.5cm]
-  \item[Tool and version] \fillin{e.g. ChatGPT (GPT-x) / Claude (model), date used}
-  \item[Prompt(s)] \fillin{Paste exactly}
-  \item[Claims checked, and against what] \fillin{Textbook chapter, lecture, case source}
-  \item[Errors found and corrected] \fillin{Flaw $\rightarrow$ course concept $\rightarrow$ evidence $\rightarrow$ how the main text changed}
-  \item[What it was good for / where it failed] \fillin{2--3 sentences}
-\end{description}
 
+\aiprompt{\fillin{Tool, version, date}}{\fillin{Paste the prompt exactly}}
+
+\paragraph{Claims checked.}
+\fillin{What was checked, and against which chapter, lecture or case source}
+
+\paragraph{Errors found and corrected.}
+\fillin{For each error: the flaw, the course concept that exposes it, the
+evidence, and how the main text changed}
+
+\paragraph{Assessment.}
+\fillin{2--3 sentences: what it was good for and where it failed}
+
+% =====================================================================
 \subsection{Task 5: Business Model Structure}
-\begin{description}[style=nextline, leftmargin=0.5cm]
-  \item[Tool and version] \fillin{e.g. ChatGPT (GPT-x) / Claude (model), date used}
-  \item[Prompt(s)] \fillin{Paste exactly}
-  \item[Claims checked, and against what] \fillin{Textbook chapter, lecture, case source}
-  \item[Errors found and corrected] \fillin{Flaw $\rightarrow$ course concept $\rightarrow$ evidence $\rightarrow$ how the main text changed}
-  \item[What it was good for / where it failed] \fillin{2--3 sentences}
-\end{description}
+
+\aiprompt{\fillin{Tool, version, date}}{\fillin{Paste the prompt exactly}}
+
+\paragraph{Claims checked.}
+\fillin{What was checked, and against which chapter, lecture or case source}
+
+\paragraph{Errors found and corrected.}
+\fillin{For each error: the flaw, the course concept that exposes it, the
+evidence, and how the main text changed}
+
+\paragraph{Assessment.}
+\fillin{2--3 sentences: what it was good for and where it failed}
