@@ -6,7 +6,7 @@
 statement to the submission. How to include it:
 (1) fill in the form and save it as a PDF;
 (2) upload it to the \texttt{figures} folder in Overleaf as
-\texttt{ai-declaration.pdf};
+\texttt{AI-declaration-signed.pdf};
 (3) recompile: the form is added automatically after this page.
 If the course also has a separate upload field for the form in Inspera, upload
 it there too.}
@@ -19,8 +19,8 @@ sources and takes full responsibility for the content.''}
 
 % The signed NTNU form is included automatically when the file below exists.
 % If your file has another name or folder, change the path in BOTH places.
-\IfFileExists{figures/ai-declaration.pdf}{%
-  \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{figures/ai-declaration.pdf}%
+\IfFileExists{figures/AI-declaration-signed.pdf}{%
+  \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{figures/AI-declaration-signed.pdf}%
 }{%
-  \guide{Signed form not found: upload it as figures/ai-declaration.pdf.}%
+  \guide{Signed form not found: upload it as figures/AI-declaration-signed.pdf.}%
 }
