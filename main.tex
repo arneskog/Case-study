@@ -71,7 +71,11 @@ Arne Skogan
 $\pm$10\%) and at least 6 peer-reviewed sources. Figures, tables, references
 and appendices do not count. Delete this guidance before submitting by
 switching \texttt{\textbackslash showguidancefalse} in main.tex.}
-
+\IfFileExists{figures/AI-declaration-signed.pdf}{%
+  \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{figures/AI-declaration-signed.pdf}%
+}{%
+  \guide{Signed form not found: upload it as figures/AI-declaration-signed.pdf.}%
+}
 \tableofcontents
 \newpage
 
@@ -96,6 +100,5 @@ check changed. The full critique goes in Appendix A.}
 \input{sections/08-appendix-a-ai-log}
 \input{sections/09-appendix-b-ai-text}
 \input{sections/10-closing-reflection}
-\input{sections/12-ai-decleration}
 
 \end{document}
