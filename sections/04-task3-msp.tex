@@ -1,0 +1,61 @@
+\subsection{Task 3: Multisided Platform Mapping}
+\label{sec:task3}
+\guide{About 850 words. Course basis: Chapter 10. Show that it really is a
+platform (sides interact through it), map each side with cross-side and
+same-side effects, and build the pricing architecture from MSP theory if the
+sources are silent: which side is subsidised, which pays, and why. State
+assumptions explicitly. No invented numbers.}
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[
+      node distance=1.6cm and 2.4cm,
+      side/.style={draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center},
+      plat/.style={draw, thick, fill=gray!15, rounded corners, minimum width=3.6cm, minimum height=1.4cm, align=center},
+      arr/.style={-{Stealth}, thick}]
+    \node[plat] (P) {\alliancename\\platform};
+    \node[side, above left=of P]  (S1) {Side 1\\{[e.g. end users]}};
+    \node[side, above right=of P] (S2) {Side 2\\{[e.g. institutions]}};
+    \node[side, below left=of P]  (S3) {Side 3\\{[e.g. developers]}};
+    \node[side, below right=of P] (S4) {Side 4\\{[e.g. data users]}};
+    \foreach \s in {S1,S2,S3,S4} \draw[arr, <->] (\s) -- (P);
+    \draw[arr, dashed, <->] (S1) -- node[above]{\small cross-side} (S2);
+    \draw[arr, dashed, <->] (S3) -- node[below]{\small cross-side} (S4);
+  \end{tikzpicture}
+  \caption{Multisided platform map (edit the sides and arrows, or replace with
+  your own figure).}
+  \label{fig:msp}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Platform sides, network effects and pricing.}
+\label{tab:msp}
+\footnotesize
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{1.4cm}YYY>{\raggedright\arraybackslash}p{1.5cm}Y>{\raggedright\arraybackslash}p{1.7cm}}
+\toprule
+Side & Who they are & Cross-side effect on & Same-side effect & Price sensitivity & Proposed pricing & Subsidised or paying \\
+\midrule
+Side 1 & & & & & & \\
+Side 2 & & & & & & \\
+Side 3 & & & & & & \\
+Side 4 & & & & & & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Is it really a platform?}
+\fillin{Text}
+
+\paragraph{Pricing architecture.}
+\fillin{Text}
+
+\paragraph{Assumptions.}
+\begin{enumerate}[label=A\arabic*.]
+  \item \fillin{Assumption and why it is reasonable}
+  \item \fillin{Assumption and why it is reasonable}
+\end{enumerate}
+
+\paragraph{What the AI check changed.}
+\fillin{Text}

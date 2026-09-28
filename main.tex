@@ -1,0 +1,93 @@
+% =====================================================================
+% TTM4165 Digital Economics — Case Study template (group of 4)
+% Compile on Overleaf with pdfLaTeX + Biber (Overleaf does this by default).
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Guidance switch ------------------------------------------
+% Grey guidance text is shown while you write. Set to false before
+% submitting and every \guide{...} disappears.
+\newif\ifshowguidance
+\showguidancetrue
+% \showguidancefalse   % <- uncomment before submission
+
+% ---------- Packages -------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}\onehalfspacing
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes}
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{references.bib}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Helper commands -----------------------------------------
+\definecolor{guidegray}{gray}{0.45}
+\newcommand{\guide}[1]{\ifshowguidance{\color{guidegray}\itshape #1\par}\fi}
+\newcommand{\fillin}[1]{\textbf{[#1]}}
+% Placeholder box for a figure you have not made yet.
+% Replace with \includegraphics[width=\linewidth]{figures/yourfile.png}
+\newcommand{\placeholder}[2][6cm]{%
+  \fbox{\parbox[c][#1][c]{0.95\linewidth}{\centering\color{guidegray}#2}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% ---------- Title info ----------------------------------------------
+\newcommand{\alliancename}{[Alliance name]}
+\newcommand{\groupnumber}{[Group number]}
+
+\title{\alliancename: A Platform-Economics Analysis of the Alliance between
+[Partner A], [Partner B] and [Partner C]}
+\author{TTM4165 Digital Economics — Group \groupnumber\\
+% Remove names for the anonymous 28 October peer-review version
+{}[Name 1], [Name 2], [Name 3], [Name 4]}
+\date{NTNU, Autumn 2026}
+
+\begin{document}
+\maketitle
+
+\guide{Target for a group of 4: about 5,000 words (4,500–5,500 is within
+$\pm$10\%) and at least 6 peer-reviewed sources. Figures, tables, references
+and appendices do not count. Delete this guidance before submitting by
+switching \texttt{\textbackslash showguidancefalse} in main.tex.}
+
+\tableofcontents
+\newpage
+
+\input{sections/00-checklist}
+\input{sections/01-introduction}
+\section{Analysis}
+\guide{For every task: write your own first version before asking AI, then run
+Generate $\rightarrow$ Evaluate and correct $\rightarrow$ Reflect. Build the
+corrected analysis here, and end each task with a short paragraph on what the AI
+check changed. The full critique goes in Appendix A.}
+\input{sections/02-task1-ecosystems}
+\input{sections/03-task2-network-effects}
+\input{sections/04-task3-msp}
+\input{sections/05-task4-cybersecurity}
+\input{sections/06-task5-business-model}
+\input{sections/07-conclusion}
+
+\newpage
+\printbibliography[title={References}]
+
+\newpage
+\appendix
+\input{sections/08-appendix-a-ai-log}
+\input{sections/09-appendix-b-ai-text}
+\input{sections/10-closing-reflection}
+
+\end{document}
