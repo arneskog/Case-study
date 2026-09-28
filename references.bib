@@ -1,22 +1,218 @@
-% Add at least 6 peer-reviewed sources. Export BibTeX from Google Scholar,
-% Oria or the publisher page. Cite in text with \parencite{key} or \textcite{key}.
-% Never cite an AI tool as a source.
+% =====================================================================
+% Reference list (BibTeX). Style: APA 7 via biblatex.
+% - Cite in the text with \parencite{key} -> (Katz & Shapiro, 1985)
+%   or \textcite{key} -> Katz and Shapiro (1985).
+% - Only entries you actually cite appear in the final reference list.
+% - Add new entries by exporting BibTeX from Google Scholar / Oria /
+%   the publisher page (Scholar: "Cite" -> "BibTeX").
+% - Check every entry against the original before submitting.
+% - Never cite an AI tool as a source.
+% - At least 6 PEER-REVIEWED sources are required (journal articles).
+%   Books, HBR, news and company pages do not count toward the 6.
+% =====================================================================
 
-@article{example2020,
-  author  = {Lastname, Firstname and Other, Author},
-  title   = {Replace with a real peer-reviewed article},
-  journal = {Journal Name},
-  year    = {2020},
-  volume  = {1},
-  number  = {1},
-  pages   = {1--20},
-  doi     = {10.0000/example}
+% ---------------------------------------------------------------------
+% Task 1: Business ecosystems (peer-reviewed)
+% ---------------------------------------------------------------------
+@article{jacobides2018,
+  author  = {Jacobides, Michael G. and Cennamo, Carmelo and Gawer, Annabelle},
+  title   = {Towards a theory of ecosystems},
+  journal = {Strategic Management Journal},
+  year    = {2018},
+  volume  = {39},
+  number  = {8},
+  pages   = {2255--2276}
 }
 
+@article{adner2017,
+  author  = {Adner, Ron},
+  title   = {Ecosystem as structure: An actionable construct for strategy},
+  journal = {Journal of Management},
+  year    = {2017},
+  volume  = {43},
+  number  = {1},
+  pages   = {39--58}
+}
+
+% Not peer-reviewed (HBR), but the classic origin of the term
+@article{moore1993,
+  author  = {Moore, James F.},
+  title   = {Predators and prey: A new ecology of competition},
+  journal = {Harvard Business Review},
+  year    = {1993},
+  volume  = {71},
+  number  = {3},
+  pages   = {75--86}
+}
+
+% ---------------------------------------------------------------------
+% Task 2: Network effects and path dependency (peer-reviewed)
+% ---------------------------------------------------------------------
+@article{katz1985,
+  author  = {Katz, Michael L. and Shapiro, Carl},
+  title   = {Network externalities, competition, and compatibility},
+  journal = {The American Economic Review},
+  year    = {1985},
+  volume  = {75},
+  number  = {3},
+  pages   = {424--440}
+}
+
+@article{arthur1989,
+  author  = {Arthur, W. Brian},
+  title   = {Competing technologies, increasing returns, and lock-in by historical events},
+  journal = {The Economic Journal},
+  year    = {1989},
+  volume  = {99},
+  number  = {394},
+  pages   = {116--131}
+}
+
+@incollection{farrell2007,
+  author    = {Farrell, Joseph and Klemperer, Paul},
+  title     = {Coordination and lock-in: Competition with switching costs and network effects},
+  booktitle = {Handbook of Industrial Organization},
+  editor    = {Armstrong, Mark and Porter, Robert},
+  volume    = {3},
+  pages     = {1967--2072},
+  publisher = {Elsevier},
+  year      = {2007}
+}
+
+% ---------------------------------------------------------------------
+% Task 3: Multisided platforms (peer-reviewed)
+% ---------------------------------------------------------------------
+@article{rochet2003,
+  author  = {Rochet, Jean-Charles and Tirole, Jean},
+  title   = {Platform competition in two-sided markets},
+  journal = {Journal of the European Economic Association},
+  year    = {2003},
+  volume  = {1},
+  number  = {4},
+  pages   = {990--1029}
+}
+
+@article{parker2005,
+  author  = {Parker, Geoffrey G. and Van Alstyne, Marshall W.},
+  title   = {Two-sided network effects: A theory of information product design},
+  journal = {Management Science},
+  year    = {2005},
+  volume  = {51},
+  number  = {10},
+  pages   = {1494--1504}
+}
+
+@article{gawer2014,
+  author  = {Gawer, Annabelle},
+  title   = {Bridging differing perspectives on technological platforms: Toward an integrative framework},
+  journal = {Research Policy},
+  year    = {2014},
+  volume  = {43},
+  number  = {7},
+  pages   = {1239--1249}
+}
+
+@article{eisenmann2011,
+  author  = {Eisenmann, Thomas and Parker, Geoffrey and Van Alstyne, Marshall},
+  title   = {Platform envelopment},
+  journal = {Strategic Management Journal},
+  year    = {2011},
+  volume  = {32},
+  number  = {12},
+  pages   = {1270--1285}
+}
+
+% ---------------------------------------------------------------------
+% Task 4: Cybersecurity economics (peer-reviewed)
+% ---------------------------------------------------------------------
+@article{hirshleifer1983,
+  author  = {Hirshleifer, Jack},
+  title   = {From weakest-link to best-shot: The voluntary provision of public goods},
+  journal = {Public Choice},
+  year    = {1983},
+  volume  = {41},
+  number  = {3},
+  pages   = {371--386}
+}
+
+@incollection{varian2004,
+  author    = {Varian, Hal R.},
+  title     = {System reliability and free riding},
+  booktitle = {Economics of Information Security},
+  editor    = {Camp, L. Jean and Lewis, Stephen},
+  publisher = {Springer},
+  year      = {2004},
+  pages     = {1--15}
+}
+
+@article{anderson2006,
+  author  = {Anderson, Ross and Moore, Tyler},
+  title   = {The economics of information security},
+  journal = {Science},
+  year    = {2006},
+  volume  = {314},
+  number  = {5799},
+  pages   = {610--613}
+}
+
+@article{gordon2002,
+  author  = {Gordon, Lawrence A. and Loeb, Martin P.},
+  title   = {The economics of information security investment},
+  journal = {ACM Transactions on Information and System Security},
+  year    = {2002},
+  volume  = {5},
+  number  = {4},
+  pages   = {438--457}
+}
+
+% ---------------------------------------------------------------------
+% Task 5: Business models (peer-reviewed unless noted)
+% ---------------------------------------------------------------------
+@article{zott2011,
+  author  = {Zott, Christoph and Amit, Raphael and Massa, Lorenzo},
+  title   = {The business model: Recent developments and future research},
+  journal = {Journal of Management},
+  year    = {2011},
+  volume  = {37},
+  number  = {4},
+  pages   = {1019--1042}
+}
+
+@article{teece2010,
+  author  = {Teece, David J.},
+  title   = {Business models, business strategy and innovation},
+  journal = {Long Range Planning},
+  year    = {2010},
+  volume  = {43},
+  number  = {2--3},
+  pages   = {172--194}
+}
+
+% Book, not peer-reviewed: source of the Business Model Canvas
+@book{osterwalder2010,
+  author    = {Osterwalder, Alexander and Pigneur, Yves},
+  title     = {Business Model Generation},
+  publisher = {John Wiley \& Sons},
+  address   = {Hoboken, NJ},
+  year      = {2010}
+}
+
+% ---------------------------------------------------------------------
+% Case evidence (required where relevant; does NOT count toward the 6)
+% Add press releases, company pages and news about YOUR alliance here.
+% ---------------------------------------------------------------------
 @online{anchorarticle2026,
-  title   = {Sovereign Healthcare Data Platform Targets Japan's Digital Health Infrastructure},
-  year    = {2026},
+  title   = {Sovereign Healthcare Data Platform Targets {Japan's} Digital Health Infrastructure},
+  organization = {medical-devices.tech},
   date    = {2026-05-20},
-  url     = {https://medical-devices.tech/news},
-  note    = {Only if you use the anchor example; does not count toward the 6 peer-reviewed sources}
+  url     = {https://medical-devices.tech/news}
+}
+
+% S3NS case evidence (add more press releases and news here)
+@online{s3ns2025,
+  author  = {{Thales Group}},
+  title   = {S3NS announces SecNumCloud qualification for PREMI3NS, its trusted cloud offering},
+  date    = {2025-12-18},
+  url     = {https://www.thalesgroup.com/en/news-centre/press-releases/s3ns-announces-secnumcloud-qualification-premi3ns-its-trusted-cloud},
+  urldate = {2026-09-28}
 }
