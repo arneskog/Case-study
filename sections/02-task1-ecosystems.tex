@@ -5,13 +5,79 @@ their roles, interactions and critical relationships; explain the
 complementarities and dependencies; and show how the alliance changes roles,
 incentives and influence compared with each firm acting alone.}
 
+% =====================================================================
+% ECOSYSTEM MAP (Figure 1): fill in with your group's own analysis.
+% 1. Replace the [ ... ] text in the boxes with actor names.
+% 2. Delete boxes you don't need, or copy a line to add one.
+% 3. Draw links at the bottom: \draw[dep] (from) -- (to);
+%    dep = depends on / critical dependency   (solid, arrow)
+%    inf = influence, rules or approval       (dashed, arrow)
+%    com = competition                        (dotted, both ends)
+%    Optional label on a link: \draw[dep] (a) -- node[lbl]{text} (b);
+% =====================================================================
 \begin{figure}[H]
-  \centering
-  \placeholder[7cm]{Figure 1: Ecosystem map --- alliance core, direct
-  stakeholders, indirect stakeholders, arrows for dependencies.\\
-  Replace with \texttt{\textbackslash includegraphics[width=\textbackslash linewidth]\{figures/ecosystem-map.png\}}}
-  \caption{Business ecosystem of \alliancename.}
-  \label{fig:ecosystem}
+\centering
+\begin{tikzpicture}[
+    font=\footnotesize,
+    core/.style={draw, very thick, fill=gray!20, rounded corners,
+                 minimum width=3.2cm, minimum height=1.2cm, align=center},
+    part/.style={draw, thick, fill=gray!8, rounded corners,
+                 minimum width=2.0cm, minimum height=0.8cm, align=center},
+    direct/.style={draw, rounded corners, fill=white,
+                   minimum width=2.3cm, minimum height=0.8cm, align=center},
+    indirect/.style={draw, dashed, rounded corners, fill=white,
+                     minimum width=2.3cm, minimum height=0.8cm, align=center},
+    dep/.style={-{Stealth[length=2.2mm]}, thick},
+    inf/.style={-{Stealth[length=2.2mm]}, thick, dashed},
+    com/.style={{Stealth[length=2mm]}-{Stealth[length=2mm]}, thick, dotted},
+    lbl/.style={fill=white, inner sep=1pt, font=\scriptsize},
+  ]
+  % --- rings (background) ---------------------------------------------
+  \draw[gray!60, dashed] (0,0) circle (3.6cm);
+  \draw[gray!60, dashed] (0,0) circle (6.3cm);
+  \node[gray, font=\scriptsize\itshape, fill=white, inner sep=1pt] at (60:3.6) {Direct stakeholders};
+  \node[gray, font=\scriptsize\itshape, fill=white, inner sep=1pt] at (90:6.3) {Indirect stakeholders};
+
+  % --- alliance core ---------------------------------------------------
+  \node[core]  (core) at (0,0.55)   {\alliancename\\{[role in one line]}};
+  \node[part]  (pA)   at (-1.15,-0.75) {[Partner A]};
+  \node[part]  (pB)   at ( 1.15,-0.75) {[Partner B]};
+
+  % --- direct stakeholders (inner ring) --------------------------------
+  \node[direct] (d1) at (90:3.6)  {[Direct 1]};
+  \node[direct] (d2) at (30:3.6)  {[Direct 2]};
+  \node[direct] (d3) at (150:3.6) {[Direct 3]};
+  \node[direct] (d4) at (-30:3.6) {[Direct 4]};
+  \node[direct] (d5) at (210:3.6) {[Direct 5]};
+  \node[direct] (d6) at (-90:3.6) {[Direct 6]};
+
+  % --- indirect stakeholders (outer ring) ------------------------------
+  \node[indirect] (i1) at (60:6.3)  {[Indirect 1]};
+  \node[indirect] (i2) at (120:6.3) {[Indirect 2]};
+  \node[indirect] (i3) at (0:6.3)   {[Indirect 3]};
+  \node[indirect] (i4) at (180:6.3) {[Indirect 4]};
+  \node[indirect] (i5) at (-60:6.3) {[Indirect 5]};
+  \node[indirect] (i6) at (-120:6.3){[Indirect 6]};
+
+  % --- links: add your own here ----------------------------------------
+  % \draw[dep] (core) -- (pA);
+  % \draw[inf] (i1) -- node[lbl]{approval} (core);
+  % \draw[com] (i3) -- (core);
+
+  % --- legend ------------------------------------------------------------
+  \begin{scope}[shift={(-7.0,-7.3)}]
+    \draw[dep] (0,0) -- (0.9,0);   \node[anchor=west] at (1.0,0)   {Dependency};
+    \draw[inf] (3.2,0) -- (4.1,0); \node[anchor=west] at (4.2,0)   {Influence / rules};
+    \draw[com] (7.0,0) -- (7.9,0); \node[anchor=west] at (8.0,0)   {Competition};
+    \node[direct, minimum width=0.6cm, minimum height=0.35cm] at (10.6,0) {};
+    \node[anchor=west] at (10.95,0) {Direct};
+    \node[indirect, minimum width=0.6cm, minimum height=0.35cm] at (12.4,0) {};
+    \node[anchor=west] at (12.75,0) {Indirect};
+  \end{scope}
+\end{tikzpicture}
+\caption{Business ecosystem of \alliancename: alliance core, direct stakeholders
+(inner ring) and indirect stakeholders (outer ring).}
+\label{fig:ecosystem}
 \end{figure}
 
 \begin{table}[H]
