@@ -11,8 +11,10 @@ firm: cloud services built on Google technology, operated under French control
 and qualified for sensitive data. The ecosystem consists of the actors that must
 align for this proposition to work.
 
-Direct stakeholders take part in delivering or using the service. Thales owns
-and controls S3NS, which operates PREMI3NS in France, while Google Cloud
+Figure~\ref{fig:ecosystem} maps the ecosystem around this value proposition.
+The alliance itself sits in the blue box in the middle. Direct stakeholders,
+shown as grey boxes below it, take part in delivering or using the service.
+Thales owns and controls S3NS, which operates PREMI3NS in France, while Google Cloud
 supplies the underlying technology, including Compute Engine, Google Kubernetes
 Engine and BigQuery \parencite{s3ns2025premi3ns}. Client institutions form the
 demand side: around thirty early customers, among them MGEN, Matmut, Club Med
@@ -35,21 +37,36 @@ lets them require US providers to disclose data stored abroad
 \parencite{doj2019cloudact}. This is the reason a French-controlled offer is
 needed at all. Competitors such as Bleu, built by Orange and Capgemini on
 Microsoft technology \parencite{lemagit2023usf}, and end users whose data is
-hosted on the platform complete the picture. As \textcite[p.~58]{overby2021}
-stress, authorities and consumers are easy to overlook but can determine a
-firm's survival. Figure~\ref{fig:ecosystem} maps these stakeholders.
+hosted on the platform complete the picture; end users are left out of the
+figure for readability. These indirect stakeholders are the orange boxes at the
+top of Figure~\ref{fig:ecosystem}, and their dashed arrows show that they act
+on the alliance through rules and competition rather than through transactions.
+As \textcite[p.~58]{overby2021} stress, authorities and consumers are easy to
+overlook but can determine a firm's survival.
 
-% Figure 1 here (the iPad drawing)
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/ecosystem.jpg}
+    \caption{Business ecosystem of S3NS. The blue box is the alliance, grey
+    boxes are direct stakeholders and orange boxes indirect stakeholders. An
+    arrow from A to B means that A depends on B, a double arrow means mutual
+    dependency, and dashed arrows show regulatory or competitive influence
+    (notation after \textcite[p.~49]{overby2021}). The line between Thales
+    and S3NS marks ownership and control.}
+    \label{fig:ecosystem}
+\end{figure}
 
 \subsubsection{Interactions and critical relationships}
 
-The most critical relationship is between S3NS and Google. Every Google
+The most critical relationship is the arrow from S3NS to Google inside the
+alliance box in Figure~\ref{fig:ecosystem}. Every Google
 technology update is received in a quarantine zone, where S3NS analyses and
 validates it before deployment in an environment administered only by S3NS
 \parencite{s3ns2025premi3ns}. This link carries both the value of the offer,
-modern cloud services, and its main risk. The second critical link runs from
-ANSSI to S3NS: without qualification, the regulated demand created by the SREN
-decree disappears. The third is the link between clients and complementors.
+modern cloud services, and its main risk. The second critical link is the
+arrow down to ANSSI: without qualification, the regulated demand created by the SREN
+decree disappears. The third is the curved arrow at the bottom of the figure, between clients
+and complementors.
 Clients can only move workloads if the software they need is available inside
 the trusted perimeter, which is why the SAP agreement matters
 \parencite{thalessap2026}.
@@ -73,8 +90,11 @@ is still small, as the ISV model on PREMI3NS is described as nascent
 
 \subsubsection{Dependencies}
 
-Using the notation of \textcite[p.~49]{overby2021}, S3NS depends on Google, on
-ANSSI and on its clients, while S3NS and its clients depend on each other.
+Read with the notation of \textcite[p.~49]{overby2021}, Figure~\ref{fig:ecosystem}
+shows two kinds of dependency. Single arrows go from the alliance to Google and
+to ANSSI: S3NS depends on them, but they do not depend on S3NS. Double arrows
+link the alliance to clients and to complementors, and clients to complementors:
+these actors depend on each other.
 The dependency on Google is the most serious because the technology is highly
 co-specialised and has low fungibility: S3NS cannot switch to another provider
 without rebuilding its service \parencite[slide~30]{windekilde2026ecosystem}.
@@ -86,7 +106,8 @@ offer's value.
 \subsubsection{How the alliance changes roles, incentives and influence}
 
 The alliance changes the position of each main actor compared with acting
-alone. Google moves from being a foreign supplier, and a competitor through its
+alone, which is why Thales and Google are drawn inside one box in
+Figure~\ref{fig:ecosystem} rather than as separate firms. Google moves from being a foreign supplier, and a competitor through its
 own public cloud, to a technology partner. It gains access to regulated French
 demand it could not serve directly, but gives up operational control to S3NS.
 Thales moves from security specialist to cloud operator and owner, and also acts
@@ -99,12 +120,3 @@ including through the replication of the model in Germany
 \parencite{thalesgoogle2026}. Influence in the ecosystem therefore rests on a
 paradox. Thales holds formal control, but Google holds the technology that the
 whole ecosystem depends on.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.90\linewidth]{figures/ecosystem.jpg}
-    \caption{Multisided Platform Map of PREMI3NS. Solid lines are platform sides, dashed lines are suppliers and regulators outside the platform market}
-    \label{fig:ecosystem}
-\end{figure}
-
-
