@@ -45,8 +45,6 @@ capabilities'' \parencite{s3ns2025premi3ns}. The French state was added as a
 stakeholder.
 
 \textit{(4) No indirect Actors.} It listed no indirect actors such as the extraterriotorial law. 
-\paragraph{Assessment.}
-Useful as a quick first list of actors.
 
 % =====================================================================
 \subsection{Task 2: Network Effects and Path Dependency}
@@ -60,23 +58,23 @@ Useful as a quick first list of actors.
 \fillin{For each error: the flaw, the course concept that exposes it, the
 evidence, and how the main text changed}
 
-\paragraph{Assessment.}
-\fillin{2--3 sentences: what it was good for and where it failed}
-
 % =====================================================================
 \subsection{Task 3: Multisided Platform Mapping}
 
-\aiprompt{\fillin{Tool, version, date}}{\fillin{Paste the prompt exactly}}
+\aiprompt{Claude Sonnet, 5}{\textit{S3NS is a trusted cloud alliance between Thales and Google Cloud, operating under the brand PREMI3NS for French public-sector and regulated private-sector clients. Treat PREMI3NS as a multisided platform. List the distinct sides that interact through it, explain the cross-side and same-side network effects between them, and propose a pricing model: which side should be charged and which side should be subsidised, and why. Limit your answer to 400 words.}}
 
 \paragraph{Claims checked.}
-\fillin{What was checked, and against which chapter, lecture or case source}
+The existence of a client side and an ISV side is broadly correct. The 15--20\% price premium and the \texteuro50,000 credit figure are not supported by any source we found; S3NS's own catalogue price list gives exact per-unit prices in euros but states no percentage premium over Google Cloud and no credit programme (S3NS, n.d.-b). The claim that ISV subsidies will shrink as the platform matures is directionally consistent with competitive bottleneck theory (Armstrong, 2006), though the AI gave no theoretical basis for it.
 
-\paragraph{Errors found and corrected.}
-\fillin{For each error: the flaw, the course concept that exposes it, the
-evidence, and how the main text changed}
+\paragraph{Errors found and corrected.} 
+[ (1) \textit{Google and ANSSI listed as platform sides.} A side must transact with another side \textit{through} the platform (Hagiu \& Wright, 2015). Google is a technology supplier paid by S3NS, and ANSSI is a regulator that qualifies the platform; neither exchanges value with clients or ISVs on the platform itself. We removed both from the side count and kept only clients and complementors (ISVs and service partners) as the two sides.
 
-\paragraph{Assessment.}
-\fillin{2--3 sentences: what it was good for and where it failed}
+(2) \textit{Invented prices.} The AI stated a ``15--20\%'' premium and ``\texteuro50,000'' in credits with no citation. Nothing in S3NS's public materials discloses a premium percentage or a credit programme of this kind. We replaced this with the actual catalogue price list, which does disclose concrete unit prices and commitment discounts (S3NS, n.d.-b), and treated the premium itself as an explicit, labelled assumption (A1) rather than a fabricated figure.
+
+(3) \textit{Same-side effect on the client side overstated.} The AI described agencies "benchmarking" each other as a network effect. Section~3.2 of our analysis treats this as a learning effect, not a true network effect, since one agency's adoption does not directly increase the value another agency gets from the platform (a distinction the course draws between scale economies/learning and genuine network effects).
+
+(4) \textit{No account of who funds the subsidy.} The AI recommended subsidising ISVs but did not say which alliance partner bears that cost. We added this using the SAP case, where Thales itself became SAP's first customer on PREMI3NS, acting as an anchor client to attract the ISV side, while Google's licence revenue grows regardless of who pays for the subsidy (Thales, 2026a).
+\end{description}]
 
 % =====================================================================
 \subsection{Task 4: Cybersecurity Economics}
@@ -90,9 +88,6 @@ evidence, and how the main text changed}
 \fillin{For each error: the flaw, the course concept that exposes it, the
 evidence, and how the main text changed}
 
-\paragraph{Assessment.}
-\fillin{2--3 sentences: what it was good for and where it failed}
-
 % =====================================================================
 \subsection{Task 5: Business Model Structure}
 
@@ -105,5 +100,3 @@ evidence, and how the main text changed}
 \fillin{For each error: the flaw, the course concept that exposes it, the
 evidence, and how the main text changed}
 
-\paragraph{Assessment.}
-\fillin{2--3 sentences: what it was good for and where it failed}

@@ -1,37 +1,69 @@
-\subsection{Task 2: Network Effects and Path Dependency}
+\section{Task 2: Network Effects and Path Dependency}
 \label{sec:task2}
-\guide{About 800 words. Course basis: Chapters 9 and 11. Does the platform get
-more valuable as users, institutions, agencies, data sources or complementary
-services join? Separate real network effects from plain economies of scale.
-Then discuss path dependency, lock-in, switching costs and tipping.}
 
-\begin{table}[H]
+% \guide{About 800 words. Course basis: Chapters 9 and 11. Does the platform get
+% more valuable as users, institutions, agencies, data sources or complementary
+% services join? Separate real network effects from plain economies of scale.
+% Then discuss path dependency, lock-in, switching costs and tipping.}
+
+This section asks whether PREMI3NS becomes more valuable as more agencies, institutions, and complementary services join, and how early choices shape later ones. We believe that the majority of the alliances' advantage is supply-side economies of scale rather than network effects, that lock-in is nevertheless strong and runs on two levels: from agency to S3NS and from S3NS to Google (\ref{sec:ValueGrowth}) and that the market is therefor likely to see lock-in without tipping (\ref{sec:PathDependency}).  
+
+\subsection{Value growth.}
+\label{sec:ValueGrowth}
+
+\cite{overby2021} separates supply-side economies of scale (p.124) from network effects. In economies of scale, size lowers the cost of production; in network effects, the size raises the value each user gets. Most of PREMI3NS' advantage is on the supply side. Google has already paid to develop Compute Engine, Kubernetes Engine, Cloud SQL, and BigQuery and spreads the cost over its global customer base. S3NS offers these services without building them (\cite{s3ns2025premi3ns}). Each new client lowers the average cost, and Thales is reusing the "identical technology and operating model" for a German region (\cite{thalesgoogle2026}). None of this makes the platform more valuable to one agency because another agency has joined. It is scale, not a network effect. 
+
+Real network effect exist, but they are mostly indirect and cross-side (\cite{overby2021}, p.135-136). More SecNumCloud clients make it worthwhile for software vendors to certify on PREMI3NS, and each certified application makes the platform more useful to clients. Because PREMI3NS exposes Google Cloud APIs, it also inherits Google's global pool og skills and tools. That network belongs to Google, not the alliance. Named reference clients such as EDF, MGEN, and Veolia (\cite{s3ns2025premi3ns}) create a bandwagon effect (\cite{overby2021}, p.135) that lowers the next buyer's perceived risk. Direct same-side effects between agencies are weak. We found no evidence that agencies exchange data through the platform, so for core hosting it behaves as a Sarnoff network, where users do not benefit from each other (p.137-138).
+
+The data network effects that power Google Search (\cite{overby2021}, p.135) are absent by design, since sovereignty rules keep client data from improving Google's services. Lastly, there is a negative network effect. All clients share one legitimacy base, so a single incident or an adverse ruling on extraterritorial law would devalue the platform for all clients (at once). 
+
+
+\subsection{Path dependency and lock-in.}
+\label{sec:PathDependency}
+
+Path dependence means that where a market ends up depends on early adopters, network effects, and external events (\cite{overby2021}, p. 167), and it may "cause strong vendor lock-in" (\cite{overby2021}, p.172). For S3NS, this means that an agency's initial decision to adopt Google based technology through PREMI3NS shapes and increasingly narrows its future options. For S3NS,lock in comes mainly from switching costs meaning that customers cannot easily move without being subdued to monetary costs, legal constraints, and technical incompatibilities.
+
+For a client agency, some mechanisms drive this lock-in to the alliances Google-based plattform:
+
+\begin{itemize}
+    \item \textbf{Data accumulation.} Datasets in BigQuery and managed databases grow year by year. Moving them is costly. \cite{oparamartins2016} highlights that data portability remains one of the biggest issues facing cloud adoption.
+
+    \item \textbf{Standards.} Virtual machines and Kubernetes follo open standards and are fairly portable. Managed data services, identity and security configuration rely on proprietary Google APIs. As in the VHS-Betamax case (\cite{overby2021}, s.168-169), incompatible standards make the first choice hard to undo.
+
+    \item \textbf{Sunk costs.} Migration projects and re-accrediation are irrecoverable.     
+
+    \item \textbf{Learning effects.} Staff are trained and certifited on Google Cloud, and procedures are built around its tools (\cite{arthur1989}).
+\end{itemize}
+
+The lock-in works on two levels. The agency depends on S3NS, and S3NS depends on Google for all its technology. What the agency is really tied to is therefore Google's technology, so leaving would mean rebuilding its systems on a different platform. \cite{overby2021} notes that the outcome of a path-dependent market is not always the best one. Agencies accept this risk because they get access to advanced cloud services that they could not easily build themselves. 
+
+
+\subsection{Tipping and winner-takes-all.}
+
+Hypothetically, positive feedback can lead to so called "winner takes all markets", meaning that the strong gets stronger and the weak gets weaker (\cite{overby2021}, p. 130 \& 168). Full tipping to S3NS is nevertheless unlikely. 
+
+First, the feedback is weak because same-side network effects are weak (\ref{sec:ValueGrowth}). Second, large institutions use several clouds, and public procurement favours multi supplier frameworks. The textbook shows that when churn between providers is balanced, as in the mobilde market, market shares stay stable, and only net churn towards towards one supplier leads to takeover (\cite{overby2021}, p.169-170). Third (\cite{arthur1989}, p. 125-126) shows that when increasing return are bounded, the market can remain shared. Demand is also split between sovereign offers tied to different hyperscalers (Bleu with Microsoft. S3NS with Google, and independets such as OVHcloud).
+
+The likely outcome is therefore lock in without tipping: strong for each client, weak across the market. Any winner-takes-all dynamic sits upstream, in which hyperscalers technology becomes the template for European sovereign cloud. The replication of the S3NS model in Germany (see section \ref{sec:ValueGrowth}) shows that this contest has started.
+
+\begin{table}[ht]
 \centering
 \small
-\caption{Network effects on the \alliancename{} platform.}
-\label{tab:networkeffects}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.4cm}Yp{1.5cm}Y}
+\caption{Economies of scale versus network effects on PREMI3NS (classification after \textcite[ch.~9]{overby2021})}
+\label{tab:task2}
+\begin{tabular}{lllll}
 \toprule
-Network effect & Type (direct / indirect / cross-side / data) & Mechanism on this platform & Strength (H/M/L) & Evidence \\
+\textbf{Mechanism} & \textbf{Type} & \textbf{Direct/indirect} & \textbf{Side} & \textbf{Strength} \\
 \midrule
- & & & & \\
- & & & & \\
- & & & & \\
+Google spreads its development costs & Economies of scale & -- & -- & High \\
+S3NS spreads its fixed costs         & Economies of scale & -- & -- & High \\
+\addlinespace
+Clients attract software vendors     & Network effect (+) & Indirect & Cross-side & Medium \\
+Compatibility with Google Cloud      & Network effect (+) & Indirect & Cross-side & High \\
+Well-known reference clients         & Bandwagon (+)      & Indirect & Same-side  & Medium \\
+Agencies sharing data                & Network effect (+) & Direct   & Same-side  & Low \\
+Client data improving the service    & Data network effect & Indirect & --        & None \\
+Shared reputation risk               & Network effect ($-$) & Indirect & Same-side & Latent \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
-
-\paragraph{Value growth.}
-\fillin{Text}
-
-\paragraph{Path dependency and lock-in.}
-\guide{Data accumulation, standards, sunk costs, learning effects, switching
-costs.}
-\fillin{Text}
-
-\paragraph{Tipping and winner-takes-all.}
-\guide{Likely or not, and why?}
-\fillin{Text}
-
-\paragraph{What the AI check changed.}
-\fillin{Text}
