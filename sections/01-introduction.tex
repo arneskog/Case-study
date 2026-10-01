@@ -1,27 +1,38 @@
 \section{Introduction}
 \label{sec:intro}
-\guide{About 400 words. Write this last, once the analysis is done.}
+Cloud computing has become core infrastructure for public administrations and critical sections, but US is the main supplier of the most advanced cloud technology. The US CLOUD Act allows US authorities to demand data from American cloud providers, even when the data is stored outside the United States \parencite{doj2019cloudact}. For European governments handling sensitive data, this creates a conflict between technological capability and control. S3NS was created as a French answer to this problem. It is a company under French law, fully owned by Thales, that runs a trusted cloud based on Google Cloud technology \parencite{s3ns2025premi3ns}.
 
-\guide{The alliance: who the partners are, which sector each comes from, and
-what they jointly design, build, own or operate.}
-\fillin{Text}
+S3NS describes itself as an alliance between Thales, the French leader in
+cybersecurity in Europe, and Google Cloud.
+The two partners play different roles. S3NS is a French-law company fully
+controlled by Thales, which runs the service in France, while Google Cloud
+supplies the underlying technology, including Compute Engine, Cloud Storage,
+Cloud SQL, Google Kubernetes Engine and BigQuery.
+Every Google technology update is first received in a quarantine zone, where
+S3NS analyses and validates it before it is deployed in an environment
+administered only by S3NS \parencite{s3ns2025premi3ns}. Google therefore holds
+no control over the operation, yet the service cannot function without its
+technology. The resulting offering, PREMI3NS, obtained the SecNumCloud 3.2
+qualification from the French cybersecurity agency ANSSI in December 2025, and
+is used by around thirty early customers, including MGEN, Matmut, Club Med and
+Birdz, a Veolia subsidiary. EDF has also announced that it has selected S3NS
+\parencite{s3ns2025premi3ns}.
 
-\guide{Why it qualifies: shared ownership, governance, investment or risk (not a
-plain vendor--customer deal), and the critical or large-scale infrastructure it
-serves.}
-\fillin{Text}
+Demand for such services is shaped by regulation. French rules require
+sensitive state data hosted with external providers to use SecNumCloud-qualified
+services, a principle that began as government cloud policy and was written into
+law through the SREN law, with implementing rules adopted in 2026
+\parencite{decretsren2026}. S3NS competes with Bleu, a trusted cloud
+built by Orange and Capgemini on Microsoft technology \parencite{lemagit2023usf},
+and with independent French providers such as OVHcloud. Its ecosystem of
+software vendors is still at an early stage \parencite{futurum2026}. The case
+therefore raises a central tension: S3NS promises sovereignty, yet depends on a
+partner whose technology it cannot replace.
 
-\guide{Research question, e.g. ``How does the alliance structure shape value
-creation, network effects and security incentives on [platform]?''}
-\textbf{Research question:} \fillin{Research question}
+This report asks how the division of roles between Thales and Google shapes
+ecosystem dependencies, lock-in, platform pricing, security incentives and value
+capture in S3NS. Section~\ref{sec:task1} to Section~\ref{sec:task5} analyse
+these questions using the frameworks of \textcite{overby2021} and the course,
+and Section~\ref{sec:conclusion} concludes. AI use follows the course
+requirements and is documented in Appendices~A and~B.
 
-\guide{Method and sources: course frameworks (textbook chapters 4, 8--11, 16,
-17, 19 and the cybersecurity guest lecture), case evidence and peer-reviewed
-literature. AI was used as required and is logged in Appendices A and B.}
-\fillin{Text}
-
-\guide{Roadmap: one sentence per section.}
-Section~\ref{sec:task1} maps the business ecosystem. Section~\ref{sec:task2}
-\fillin{\dots}. Section~\ref{sec:task3} \fillin{\dots}.
-Section~\ref{sec:task4} \fillin{\dots}. Section~\ref{sec:task5} \fillin{\dots}.
-Section~\ref{sec:conclusion} concludes.
