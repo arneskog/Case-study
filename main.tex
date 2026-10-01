@@ -45,6 +45,7 @@
 \newcommand{\placeholder}[2][6cm]{%
   \fbox{\parbox[c][#1][c]{0.95\linewidth}{\centering\color{guidegray}#2}}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{3em}   % avoids lines running into the margin
 
 % ---------- Title info ----------------------------------------------
 \newcommand{\alliancename}{S3NS}
@@ -65,6 +66,8 @@ Anders Alexander H{\ae}rum Eltoft\\
 Arne Skogan
 \end{tabular}}
 \date{NTNU, Autumn 2026}
+
+\setcounter{tocdepth}{3}   % show tasks and their parts in the contents
 
 \begin{document}
 \maketitle
@@ -91,13 +94,12 @@ switching \texttt{\textbackslash showguidancefalse} in main.tex.}
 \input{sections/06-task5-business-model}
 \input{sections/07-conclusion}
 
+\input{sections/11-references}
 
 \newpage
 \appendix
 \input{sections/08-appendix-a-ai-log}
 \input{sections/09-appendix-b-ai-text}
 \input{sections/10-closing-reflection}
-
-\input{sections/11-references}
 
 \end{document}
