@@ -59,7 +59,7 @@ most likely to happen. The structure of each layer is summarised in Table~\ref{t
 \caption{Provision structure of PREMI3NS security by layer (after
 Varian \cite{varian2004})}
 \label{tab:provision}
-\begin{tabular}{llll}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{2.0cm}YY}
 \toprule
 \textbf{Layer} & \textbf{Structure} & \textbf{Controlled by} & \textbf{Main risk} \\
 \midrule
@@ -68,7 +68,7 @@ Identity and operations & Weakest link & S3NS & One compromised account \\
 Client tenants & Weakest link & Client institutions & Misconfiguration \\
 Vendor applications & Weakest link & ISVs and integrators & Low-effort vendor \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \subsubsection{Incentive asymmetry}
@@ -85,7 +85,7 @@ When talking about security each actors values security by their own losses rath
 \caption{Security effort and loss per actor on PREMI3NS (qualitative
 assessments by the group; no probabilities or budgets are disclosed)}
 \label{tab:cyberloss}
-\begin{tabular}{p{2.0cm}p{1.4cm}p{1.2cm}p{3.0cm}p{2.6cm}p{3.0cm}}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{1.5cm}YYY}
 \toprule
 \textbf{Actor} & \textbf{Effort borne} & \textbf{Loss $D_i$} &
 \textbf{Type of loss} & \textbf{Control over risk} & \textbf{Asymmetry} \\
@@ -111,7 +111,7 @@ Privacy, public trust, national security &
 None &
 Full: loss without any decision \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 As argued in Section~\ref{sec:task3} the vendors are price sensitive and can offer products on other trusted clouds at the same time. Therefore a breach on PREMI3NS would not harm them much, since they can sell other trusted clouds. Note that there will still be a small harm, for example in their reputation and customers trust. As their software exists in a weakest-link layer, the participant with the least gain relatively to its cost decides the collective security \cite[p.~4]{varian2004}. This means that the actor with the smallest loss is the actor with least incentive to invest in security. Because the vendors are the subsidized side, the side that PREMI3NS subsidises is also the side setting the collective security level.
@@ -136,6 +136,6 @@ the public record is silent.}
 
 To reduce the distance between the individual and collective optimal strategy one can use certain instruments that allocate others losses towards the one that controls the risk. The effectiveness of such an instrument is given by whether it changes behaviour of the actors before an actual breach happens \cite[slide 26]{kianpour2026slides}. When security is dependent of others it is shown that liabilities and insurance not necessarily give efficient results alone, which is why regulations or further coordination might be needed \cite[p.~231]{kunreutherheal2003}.
 
-Of such instruments PREMI3NS mainly uses three. Certification is the first one. SecNumCloud approval is given bt ANSSI after an approved evaluation centre have made an audit \cite{anssi_secnumcloud}. This mechanism facilitates that clients who do not have access to check the platform by themselves can trust the platforms security. This is a classic example of the answer to a market for lemons \cite[p.~363]{anderson2001}. But its worth noting that such approval only reflects a snapshot of one point of time \cite[slide 31]{kianpour2026slides}. Secondly, architecture is another instrument. The rule that only S3NS staff can operate the platform and the quarantine zone \cite{s3ns2025premi3ns} separate channels where errors could spread from Google's global cloud. Thirdly, PREMI3NS is subject to regulation. Qualification is a legal requirement for particularly sensitive state data by the SREN law \cite{sren_decree}, and cloud providers is listed as highly critical by NIS2 and require them to manage security in their supply chain \cite[Annex~I, Art.~21(2)(d)]{nis2}. Raising the minimum level raises the overall security under the weakest link provision, and regulation is an instrument reaching the weakest participant \cite[slide 30]{kianpour2026slides}.
+Of such instruments PREMI3NS mainly uses three. Certification is the first one. SecNumCloud approval is given bt ANSSI after an approved evaluation centre have made an audit \cite{anssi_secnumcloud}. This mechanism facilitates that clients who do not have access to check the platform by themselves can trust the platforms security. This is a classic example of the answer to a market for lemons \cite[p.~363]{anderson2001}. But its worth noting that such approval only reflects a snapshot of one point of time \cite[slide 31]{kianpour2026slides}. Secondly, architecture is another instrument. The rule that only S3NS staff can operate the platform and the quarantine zone \cite{s3ns2025premi3ns} separate channels where errors could spread from Google's global cloud. Thirdly, PREMI3NS is subject to regulation. Qualification is a legal requirement for particularly sensitive state data by the SREN law \cite{decretsren2026}, and cloud providers is listed as highly critical by NIS2 and require them to manage security in their supply chain \cite[Annex~I, Art.~21(2)(d)]{nis2}. Raising the minimum level raises the overall security under the weakest link provision, and regulation is an instrument reaching the weakest participant \cite[slide 30]{kianpour2026slides}.
 
 The instruments addressing the imbalances in PREMI3NS are, as far as we can find, not addressed in public sources. Therefore we were not able to find how a liability is split between Google and Thales in case of a breach. Whether vendors must meet any security requirements before using the platform is neither something we did find. Our searches did neither find any information on cyber insurance. Such insurance would be a difficult product as a flaw in the shared code would affect all client institutions at the same time, a correlated risk which is generally difficult to insure \cite{andersonmoore2006}. The main gaps in the alliance´s security governance are therefore considered to be the vendor side and the liability split between the partners.
