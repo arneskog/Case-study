@@ -1,36 +1,24 @@
 \section{Introduction}
 \label{sec:intro}
-Cloud computing has become core infrastructure for public administrations and critical sections, but US is the main supplier of the most advanced cloud technology. The US CLOUD Act allows US authorities to demand data from American cloud providers, even when the data is stored outside the United States \parencite{doj2019cloudact}. For European governments handling sensitive data, this creates a conflict between technological capability and control. S3NS was created as a French answer to this problem. It is a company under French law, fully owned by Thales, that runs a trusted cloud based on Google Cloud technology \parencite{s3ns2025premi3ns}.
+Cloud computing has become core infrastructure for public administrations and critical sections, but US is the main supplier of the most advanced cloud technology. The US CLOUD Act allows US authorities to demand data from American cloud providers, even when the data is stored outside the United States \parencite{doj2019cloudact}. For European governments handling sensitive data, this creates a conflict between technological capability and control. 
 
-S3NS describes itself as an alliance between Thales, the French leader in
-cybersecurity in Europe, and Google Cloud.
-The two partners play different roles. S3NS is
-controlled by Thales, which runs the service in France, while Google Cloud
-supplies the underlying technology.
-Every Google technology update is first received in a quarantine zone, where
-S3NS analyses and validates it before it is deployed in an environment
-administered only by S3NS \parencite{s3ns2025premi3ns}. Google therefore holds
-no control over the operation, yet the service cannot function without its
-technology. The resulting offering, PREMI3NS, obtained the SecNumCloud 3.2
-qualification from the French cybersecurity agency ANSSI in December 2025, and
-is used by around thirty early customers
-\parencite{s3ns2025premi3ns}.
-
-Demand for such services is shaped by regulation. French rules require
-sensitive state data hosted with external providers to use SecNumCloud-qualified
-services, a principle that began as government cloud policy and was written into
-law through the SREN law, with implementing rules adopted in 2026
-\parencite{decretsren2026}. S3NS competes with Bleu, a trusted cloud
-built by Orange and Capgemini on Microsoft technology \parencite{lemagit2023usf},
-and with independent French providers such as OVHcloud. Its ecosystem of
-software vendors is still at an early stage \parencite{futurum2026}. The case
-therefore raises a central tension: S3NS promises sovereignty, yet depends on a
-partner whose technology it cannot replace.
+S3NS was created as a French answer to this problem. It is a company under
+French law, fully owned by Thales, that offers a trusted cloud called PREMI3NS,
+built on Google Cloud technology \parencite{s3ns2025premi3ns}. The alliance
+combines two partners with different strengths: Thales brings French ownership,
+operation and security expertise, while Google brings the technology. The
+offer targets public bodies and companies that, under French rules, must keep
+sensitive data in a specially qualified cloud \parencite{decretsren2026}. The
+case therefore raises a central tension: S3NS promises sovereignty, yet depends
+on a partner whose technology it cannot replace.
 
 This report asks how the division of roles between Thales and Google shapes
 ecosystem dependencies, lock-in, platform pricing, security incentives and value
-capture in S3NS. Section~\ref{sec:task1} to Section~\ref{sec:task5} analyse
-these questions using the frameworks of \textcite{overby2021} and the course,
-and Section~\ref{sec:conclusion} concludes. AI use follows the course
-requirements and is documented in Appendices~A and~B.
-
+capture in S3NS. Section~\ref{sec:task1} maps the business ecosystem around
+S3NS. Section~\ref{sec:task2} examines network effects, path dependency and
+lock-in. Section~\ref{sec:task3} maps PREMI3NS as a multisided platform and its
+pricing. Section~\ref{sec:task4} analyses how security is provided and paid for
+within the alliance, and Section~\ref{sec:task5} how value, costs and resources
+are divided in its business model. Section~\ref{sec:conclusion} concludes. The
+analysis uses the frameworks of \textcite{overby2021} and the course, and AI use
+is documented in Appendices~A and~B.

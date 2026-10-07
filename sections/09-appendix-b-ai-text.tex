@@ -27,7 +27,20 @@ Google Cloud, as a foundational side, should also receive favorable terms, since
 
 \subsection{Task 4: AI output}
 \begin{quote}\small
-\fillin{Paste raw AI output}
+Platform security is a \textbf{jointly produced good}: both partners benefit from customer trust, but neither can secure the platform alone. Their investments are complementary; weak operational controls can undermine secure software, and software vulnerabilities can defeat strong operations. Each may underinvest if it captures only part of the benefits while others bear breach losses.
+
+\textbf{Responsibility should follow control:}
+\begin{itemize}
+\item \textbf{Thales/S3NS} should fund and manage operational security: physical infrastructure, production configuration, privileged access, network isolation, encryption-key management, monitoring, backups and incident response. S3NS exclusively operates PREMI3NS in France and quarantines, analyses and validates technology updates before deployment. It therefore controls the production environment and the gate through which Google’s updates enter. \href{https://www.s3ns.io/en/news/premi3ns-secnumcloud-qualification?utm_source=chatgpt.com}{[s3ns.io]}
+\item \textbf{Google Cloud} should fund secure development of its licensed technology: architecture, code review, vulnerability discovery, dependency management, build integrity and timely patches. Its attack surface lies primarily upstream, in software and the update supply chain; supplying technology does not imply administering PREMI3NS.
+\item \textbf{Both} should jointly fund interface testing, threat modelling and incident exercises. Contracts should specify patch deadlines, evidence requirements, audit rights and responsibility for failures. Investment should follow each party’s ability to reduce expected total losses at the lowest marginal cost, rather than an arbitrary equal split.
+\end{itemize}
+
+Software vendors, integrators and clients also control application code, integrations, identities and workload configurations. ANSSI explicitly warns that qualification of a cloud offer does not establish the security of applications hosted on it. \href{https://cyber.gouv.fr/enjeux-technologiques/cloud/faq-qualification-secnumcloud/?utm_source=chatgpt.com}{[ANSSI]}
+
+\textbf{Losses would be distributed.} Clients initially suffer disruption, data loss and recovery costs; individuals and public-service users may suffer privacy harms or interrupted services. S3NS bears response costs and commercial damage; Thales may suffer reduced subsidiary value and reputational damage. Google risks remediation costs, lost licensing revenue and reputational harm. Compensation, penalties and indemnities depend on applicable law, contracts and the breach’s cause; Thales’s ownership does not automatically establish direct liability. Contracts should make each partner internalise losses attributable to failures it controls.
+
+\textbf{French hosting improves some dimensions of security, but geography alone provides no guarantee.} Domestic operational control and SecNumCloud safeguards can reduce exposure to foreign jurisdiction and strengthen oversight. \href{https://cyber.gouv.fr/enjeux-technologiques/cloud/?utm_source=chatgpt.com}{[ANSSI]} They do not eliminate phishing, insiders, misconfiguration or exploitable code. Upstream dependence remains, while update validation must avoid delaying urgent patches. The relevant comparison is effective controls, resilience and incentives—not simply server nationality.
 \end{quote}
 
 \subsection{Task 5: AI output}

@@ -5,29 +5,137 @@ lecture. Identify the provision structure, map costs and losses per actor,
 show at least one incentive asymmetry, and discuss correcting instruments.
 Use qualitative levels or clearly labelled illustrative assumptions only.}
 
+On a shared platform, security is supplied jointly by the alliance
+partners, rather than a single firm. This section will examine this
+across our alliance, treating it as a jointly provided good
+\cite[slides 10, 20]{kianpour2026slides}. We will identify the provision
+structure for PREMI3NS, and map where security effort, exposure to loss,
+and control is split among the stakeholders, and look at what moves the
+balance towards an efficient level.
+
 \subsubsection{Provision structure}
-\guide{Weakest-link, total-effort or best-shot for each layer (core
-infrastructure, interfaces, identity layer, consumer apps). Justify it from
-each partner's role and the attack surface it controls.}
-\fillin{Text}
+
+Efforts in security can be combined in three ways. Total effort is the sum
+of individual security efforts, weakest link is set by the least protected
+entity and best shot is where one strong provider gives protection to
+everyone \cite[p.~1]{varian2004}. For PREMI3NS, the core infrastructure is
+close to best shot. Google has written the software. In addition, every
+update gets analysed and validated by S3NS before it is deployed
+\cite{s3ns2025premi3ns}. So errors will only reach production if they pass
+both checks. The security layer can therefore be set by the stronger
+filter. This can maybe be classified as the strongest security mechanism
+but not without cost. When one provider protects everyone, this provider's
+failure will give everyone a failure, which in this case is a potential
+security breach \cite[slide 23]{kianpour2026slides}.
+
+The identity and operations layer can be classified as a weakest link.
+S3NS staff in France are the administrators of PREMI3NS
+\cite{s3ns2025premi3ns}. This narrows who can reach the system. In this
+case one compromised administrator account or a badly configured access
+policy can open the system to attack regardless of the strength of the
+rest of the platform. Shared identity and login systems are a typical
+weakest link setting \cite[slide 21]{kianpour2026slides}.
+
+Interfaces and applications are also considered to be a weakest link. The
+institutions set up their system in their own way. When data is moved to
+the new system, integrators get access, and vendors run their own software
+inside the trusted environment. None of this is directly controlled by
+S3NS. The reliability is set by the participant with the lowest
+benefit-cost ratio in a weakest link provision \cite[p.~4]{varian2004},
+which implies that the least careful client or vendor is the one
+determining the security. Since the end users reach PREMI3NS through the
+services of client institutions, one can argue that this is where their
+exposure is.
+
+To conclude, the strength of security on PREMI3NS varies. The core,
+protected by Google and S3NS, is already well protected. Client systems
+and vendor applications are where the weak spots are. With many different
+parties involved, the weakest link is where a potential security breach is
+most likely to happen. The structure of each layer is summarised in Table~\ref{tab:provision}. 
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Provision structure of PREMI3NS security by layer (after
+Varian \cite{varian2004})}
+\label{tab:provision}
+\begin{tabular}{llll}
+\toprule
+\textbf{Layer} & \textbf{Structure} & \textbf{Controlled by} & \textbf{Main risk} \\
+\midrule
+Core infrastructure & Best shot & Google (code), S3NS (validation) & Concentration \\
+Identity and operations & Weakest link & S3NS & One compromised account \\
+Client tenants & Weakest link & Client institutions & Misconfiguration \\
+Vendor applications & Weakest link & ISVs and integrators & Low-effort vendor \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsubsection{Incentive asymmetry}
 \guide{At least one case where a partner's private optimum leaves the platform
 under-secured, or where the loss falls on actors who make no investment
 decision. Link the size of the loss to the network effects in
 Section~\ref{sec:task2} and the subsidised side in Section~\ref{sec:task3}.}
-\fillin{Text}
 
-\guide{Optional: a simple formal statement of the private vs.\ social optimum.}
+When talking about security each actors values security by their own losses rather than the total loss caused by a breach. As a result actors will together spend less than they should on security \cite[slide 15]{kianpour2026slides}. The likelihood of a failure is usually higher if the protector of the systems is someone else than the one suffering from the failures \cite[p.~610]{andersonmoore2006}. Table~\ref{tab:cyberloss} shows how control, effort and loss is distributed between the PREMI3NS actors. Real numbers are not public, so note that these are our own qualitative assessments. 
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Security effort and loss per actor on PREMI3NS (qualitative
+assessments by the group; no probabilities or budgets are disclosed)}
+\label{tab:cyberloss}
+\begin{tabular}{p{2.0cm}p{1.4cm}p{1.2cm}p{3.0cm}p{2.6cm}p{3.0cm}}
+\toprule
+\textbf{Actor} & \textbf{Effort borne} & \textbf{Loss $D_i$} &
+\textbf{Type of loss} & \textbf{Control over risk} & \textbf{Asymmetry} \\
+\midrule
+Thales / S3NS & High & High &
+Revenue, SecNumCloud qualification, reputation &
+Operations, admin access, update validation &
+Low: controls much of what it loses \\
+Google Cloud & High (generic), Low (PREMI3NS-specific) & Low--Medium &
+Licence revenue, reputation of the model &
+Code and update content &
+Medium: controls the core, bears little of the loss \\
+ISVs and service partners & Low & Low &
+Lost sales on one of several clouds &
+Applications, migration access &
+High: weakest-link interface, subsidised, multi-home \\
+Client institution & Medium & High &
+Data loss, service stop, legal exposure &
+Own configuration only &
+High: large loss, little control, locked in \\
+End users / society & None & High &
+Privacy, public trust, national security &
+None &
+Full: loss without any decision \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As argued in Section~\ref{sec:task3} the vendors are price sensitive and can offer products on other trusted clouds at the same time. Therefore a breach on PREMI3NS would not harm them much, since they can sell other trusted clouds. Note that there will still be a small harm, for example in their reputation and customers trust. As their software exists in a weakest-link layer, the participant with the least gain relatively to its cost decides the collective security \cite[p.~4]{varian2004}. This means that the actor with the smallest loss is the actor with least incentive to invest in security. Because the vendors are the subsidized side, the side that PREMI3NS subsidises is also the side setting the collective security level.
+
+In the alliance there is an imbalance, since Google writes the code, but if there is a security breach in PREMI3NS, Thales and S3NS are the ones who mainly experience losses. They could in the instance of a breach loose both the SecNumClouds approval and their reputation. This is a weakness, as we know problems arise if the one who can protect a system is not the one who suffers if the security fails \cite[p.~358]{anderson2001}. A problem which is less serious than for the vendors. Generally, a flaw in Google's code will give Google's own cloud a blemish as well. Therefore Google has incentive to secure its code. The difference therefore is mainly applicable to the parts that are exclusive to PREMI3NS.  
+
+The ones who have the least impact in the security of the service is the one who gets the biggest losses. The end user have no control of their security, and client institutions dont have any more control than over their own settings. Two mechanisms discussed in section~\ref{sec:task2} make these losses larger. Firstly, all clients depend on the reputation of the same platform, so one breach will give them all collective hit. If we look at the scale of it, it will be readonable to say that the more client institutions, the larger the loss in total will be. Secondly, since clients are locked in, they will not have the opportunity to easily leave after such an event. This means the alliance is less incentivized to invest in security, because loosing clients is a smaller risk, and as discussed in Section~\ref{sec:task3}, the paying side is also the one carrying the loss.
+
+The imbalance can be written with an equation. Below is the equation that needs to be solved by a certain actor $i$ to the left, where each actor accounts for its own loss. To the right we have the equation ehich gives the best collective result. Here all losses are counted in. And because every actors loss makes a part of the total, each actor spend less than would be best for everyone together. And as we know for a weakest-link layer, the actor with the least possible loss is the one who determines the level of security for everyone.
 \begin{equation}
-  \min_{x_i}\; c_i(x_i) + p(x_1,\dots,x_n)\,D_i
+  \min_{x_i}\; c_i(x_i) + p\big(\min_j x_j\big)\,D_i
   \quad\text{vs.}\quad
-  \min_{x_1,\dots,x_n}\; \sum_i c_i(x_i) + p(x_1,\dots,x_n)\sum_i D_i
+  \min_{x_1,\dots,x_n}\; \sum_i c_i(x_i)
+  + p\big(\min_j x_j\big)\Big(\sum_i D_i + D_{\text{clients}}
+  + D_{\text{society}}\Big)
 \end{equation}
 
 \subsubsection{Correcting instruments}
 \guide{Liability clauses, SLAs with penalties, shared incident response, cyber
 insurance, certification, regulation. Say which the alliance uses, and where
 the public record is silent.}
-\fillin{Text}
 
+To reduce the distance between the individual and collective optimal strategy one can use certain instruments that allocate others losses towards the one that controls the risk. The effectiveness of such an instrument is given by whether it changes behaviour of the actors before an actual breach happens \cite[slide 26]{kianpour2026slides}. When security is dependent of others it is shown that liabilities and insurance not necessarily give efficient results alone, which is why regulations or further coordination might be needed \cite[p.~231]{kunreutherheal2003}.
+
+Of such instruments PREMI3NS mainly uses three. Certification is the first one. SecNumCloud approval is given bt ANSSI after an approved evaluation centre have made an audit \cite{anssi_secnumcloud}. This mechanism facilitates that clients who do not have access to check the platform by themselves can trust the platforms security. This is a classic example of the answer to a market for lemons \cite[p.~363]{anderson2001}. But its worth noting that such approval only reflects a snapshot of one point of time \cite[slide 31]{kianpour2026slides}. Secondly, architecture is another instrument. The rule that only S3NS staff can operate the platform and the quarantine zone \cite{s3ns2025premi3ns} separate channels where errors could spread from Google's global cloud. Thirdly, PREMI3NS is subject to regulation. Qualification is a legal requirement for particularly sensitive state data by the SREN law \cite{sren_decree}, and cloud providers is listed as highly critical by NIS2 and require them to manage security in their supply chain \cite[Annex~I, Art.~21(2)(d)]{nis2}. Raising the minimum level raises the overall security under the weakest link provision, and regulation is an instrument reaching the weakest participant \cite[slide 30]{kianpour2026slides}.
+
+The instruments addressing the imbalances in PREMI3NS are, as far as we can find, not addressed in public sources. Therefore we were not able to find how a liability is split between Google and Thales in case of a breach. Whether vendors must meet any security requirements before using the platform is neither something we did find. Our searches did neither find any information on cyber insurance. Such insurance would be a difficult product as a flaw in the shared code would affect all client institutions at the same time, a correlated risk which is generally difficult to insure \cite{andersonmoore2006}. The main gaps in the alliance´s security governance are therefore considered to be the vendor side and the liability split between the partners.

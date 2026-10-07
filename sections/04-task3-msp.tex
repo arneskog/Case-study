@@ -7,12 +7,12 @@
 
 \subsubsection{Is it really a platform?}
 
+A MSP is a multisided platform that lets two or more distinct groups interact directly, and each group is affiliated with the platform (Øverby
+and Audestad \parencite[p.~150]{overby2021}). This test is important for S3NS. The core PREMI3NS looks like a pipeline. S3NS licences Google Cloud Technology, runs it in France under French control and sells capacity to clients. If that were all, S3NS would be a sovereign reseller, not a platform. 
 
-A MSP is a multisided platform that lets two or more distinct groups interact directly, and each group is affiliated with the platform \parencite[p.~150]{overby2021}. This test is important for S3NS. The core PREMI3NS looks like a pipeline. S3NS licences Google Cloud Technology, runs it in France under French control and sells capacity to clients. If that were all, S3NS would be a sovereign reseller, not a platform. 
+The lecture "Network Economics\_PathDependency\_MultisidedPlatforms\_2026" separates an MSP from a reseller \cite[slide 40]{windekilde2026msp} \parencite[p.~150]{overby2021})MJAU. A reseller buys from an producer and sells to a buyer, and the two never interact. An MSP enables direct itneraction between groups that are all affiliated with it \parencite[p.~150]{overby2021}). For its core service, S3NSlooks like a reseller: it licences Google Cloud Technology and sells capacity to clients, and Google never meets the client. We argue that PREMI3NS is a hybrid. On top of this reseller core sits a platform layer where clients and software vendors deal with each other directly. SAP, for example, sells its ERP to course lists cloud services among technology platforms \cite[slide 36]{windekilde2026msp}.
 
-We argue that PREMI3NS is a hybrid. The pipeline part brings in most of the revenue, but there is a platform layer on top of it. S3NS presents its offer as an ecosystem where service partners help clients migrate, and independent software vendors (ISVs) add their own solutions on top of the cloud \parencite{s3nsecosystem}. The clearest example is SAP. In 2026 SAP agreed to run its RISE private cloud ERP on PREMI3NS, with commercial availability planned for the second part of 2026 \parencite{thalessap2026}. SAP joins to reach regulated clients it could not otherwise serve, and clients join partly because software like SAP is available inside the trusted perimeter. The value each group gets depends on how many members the other group has. That is the defining feature of an MSP \parencite[p.~150]{overby2021}.
-
-Two actors are often wrongly treated as platform sides. Google for instance is not a side. It only supplies the technology to the alliance and is paid for that, but Google does not transact with clients through the platform. ANSSI is not a side either, it only sets the rules that decide who may enter the trusted perimeter at all. Both shape the platform from outside the market it creates. 
+Two actors are often wrongly treated as sides. Google supplies technology to the alliance and is paid for it, but does not transact with clients through the platform. ANSSI sets the rules for who may enter the trusted perimeter. Both shape the platform from outside the market it creates. 
 
 \subsubsection{The sides}
 
@@ -20,9 +20,11 @@ Two actors are often wrongly treated as platform sides. Google for instance is n
 data with a private cloud provider, they must use a service qualified by ANSSI
 (in practice SecNumCloud) or certified at EU level. This requirement was written
 into law through article 31 of the 2024 SREN law, with an implementing decree
-adopted in April 2026 \parencite{decretsren2026}. The second group is large companies in regulated sectors. Around ~30 early adopters tested the PREMI3NS before qualification, and EDF and Thales itself are named users \parencite{s3ns2025premi3ns}. For these firms, trusted cloud is a strategic choice and not a legal duty. Both groups face high switching costs once they have migrated.
+adopted in April 2026 \parencite{decretsren2026}. The second group is large companies in regulated sectors. Around ~30 early adopters tested the PREMI3NS before qualification, and EDF and Thales itself are named users \parencite{s3ns2025premi3ns}. For these firms, trusted cloud is a strategic choice and not a legal duty. Both groups face high switching costs once they have migrated. Their value proporsition is modern cloud services that can legally host sensitive data and are shielded from extraterritorial law. 
 
-\textbf{Side 2: Complementors.} These are ISVs, SaaS providers and service partners (integrator and consultancies). They must invest to port to qualify their products, and most can also offer them on competing trusted clouds, so they multi-home. An industry analysis describes the ISV model on PREMI3NS as still at an early stage \parencite{futurum2026}. This means the platform does not yet have a large complementor side, which is exactly the chicken-and-egg problem MSP theory describes.
+
+
+\textbf{Side 2: Complementors.} These are ISVs, SaaS providers and service partners (integrator and consultancies). They must invest to port to qualify their products, and most can also offer them on competing trusted clouds, so they multi-home. An industry analysis describes the ISV model on PREMI3NS as still at an early stage \parencite{futurum2026}. This means the platform does not yet have a large complementor side, which is exactly the chicken-and-egg problem MSP theory describes. Their value proporsition is access to regulated clients they could not otherwise serve, without building their own qualified infrastructure. 
 
 
 \begin{figure}[H]
@@ -33,6 +35,10 @@ adopted in April 2026 \parencite{decretsren2026}. The second group is large comp
 \end{figure}
 
 \subsubsection{Cross-side and same-side effects}
+
+Table~\ref{tab:effects} classifies the effects using the course typology \cite[slides 14--23]{windekilde2026msp}. The strongest effect runs from clients to vendors. It is a positive, indirect, cross-side effect: like app developers on iOS, vendors respond to the size of the installed base rather than to invidual clients \cite[slide 19]{windekilde2026msp}. Every new regulated client enlarges a market for SexNumCloud-ready software that barely existed before qualification. The effect from vendors to clients is positive but weaker. A client can only move a workload if the software it needs is available, as the SAP case shows, but many clients build their own applications and Google compatibility already gives them familiar tools. While the vendor side is thin, the same mechanism can run in reverse. Too few applications keep clients away, and toofew clients keep vendors away, the "app gap" that hurt Windows phone \cite[slide 23]. 
+
+Same-side effects are weak. Section~2.2.1 shows that clients do not interact through the platform, so there is no direct same-side effect, only a weak bandwagon effect from reference clients. Among vendors the effect is negative, since more vendors means more competition for the same clients, a pattern the lecture describes for sellers on MSPs \cite[slide 40]{windekilde2026msp}. Disintermediation is not a real threat. Clients and vendors cannot meet outside a qualified cloud for sensitive data, so the law keepstheir transaction on qualified platforms \cite[slide 27]{windekilde2026msp}. Th
 
 Table~\ref{tab:effects} summarises the effects. The strongest effect runs from the clients to the vendors. Every new regulated client makes the market for SecNumCloud ready software larger and before the qualification this market barely existed. The effect from vendors to the clients is positive but weaker. A client can only move a workload if the software it needs is available, as the SAP case shows for the ERP systems. However, many clients build their own applications directly on the infrastructure, and the Google compatibility means familiar tools are already there. 
 
