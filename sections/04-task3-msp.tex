@@ -38,11 +38,7 @@ adopted in April 2026 \parencite{decretsren2026}. The second group is large comp
 
 Table~\ref{tab:effects} classifies the effects using the course typology \cite[slides 14--23]{windekilde2026msp}. The strongest effect runs from clients to vendors. It is a positive, indirect, cross-side effect: like app developers on iOS, vendors respond to the size of the installed base rather than to invidual clients \cite[slide 19]{windekilde2026msp}. Every new regulated client enlarges a market for SexNumCloud-ready software that barely existed before qualification. The effect from vendors to clients is positive but weaker. A client can only move a workload if the software it needs is available, as the SAP case shows, but many clients build their own applications and Google compatibility already gives them familiar tools. While the vendor side is thin, the same mechanism can run in reverse. Too few applications keep clients away, and toofew clients keep vendors away, the "app gap" that hurt Windows phone \cite[slide 23]{windekilde2026msp}.
 
-Same-side effects are weak. Section~2.2.1 shows that clients do not interact through the platform, so there is no direct same-side effect, only a weak bandwagon effect from reference clients. Among vendors the effect is negative, since more vendors means more competition for the same clients, a pattern the lecture describes for sellers on MSPs \cite[slide 40]{windekilde2026msp}. Disintermediation is not a real threat. Clients and vendors cannot meet outside a qualified cloud for sensitive data, so the law keepstheir transaction on qualified platforms \cite[slide 27]{windekilde2026msp}. Th
-
-Table~\ref{tab:effects} summarises the effects. The strongest effect runs from the clients to the vendors. Every new regulated client makes the market for SecNumCloud ready software larger and before the qualification this market barely existed. The effect from vendors to the clients is positive but weaker. A client can only move a workload if the software it needs is available, as the SAP case shows for the ERP systems. However, many clients build their own applications directly on the infrastructure, and the Google compatibility means familiar tools are already there. 
-
-The same side effects are weak. Among the clients, early adopters create reference cases and experience that others copy. As Section~\ref{sec:PathDependency} argues, this is mostly a learning effect and not a true network effect. A ministry does not gain directly because another ministry joins. Among vendors, the same-side effect is mostly negative, since they compete for the same small group of clients. 
+Same-side effects are weak. Section~2.2.1 shows that clients do not interact through the platform, so there is no direct same-side effect, only a weak bandwagon effect from reference clients. Among vendors the effect is negative, since more vendors means more competition for the same clients, a pattern the lecture describes for sellers on MSPs \cite[slide 40]{windekilde2026msp}. Disintermediation is not a real threat. Clients and vendors cannot meet outside a qualified cloud for sensitive data, so the law keepstheir transaction on qualified platforms \cite[slide 27]{windekilde2026msp}. The competitive risk is instead that vendors multi-home on rival qualified clouds such as bleu. 
 
 
 \begin{table}[h]
@@ -50,22 +46,25 @@ The same side effects are weak. Among the clients, early adopters create referen
 \begin{tabular}{|p{3.3cm}|p{1.8cm}|p{7.9cm}|}
 \hline
 \textbf{Effect} & \textbf{Strength} & \textbf{Reason} \\ \hline
-Clients $\rightarrow$ Vendors & High & New regulated clients open a market that vendors cannot otherwise reach. \\ \hline
-Vendors $\rightarrow$ Clients & Medium & More workload can migrate, but many clients build their own applications \\ \hline
-Client $\leftrightarrow$ Client & Low (+) & Learning and reference cases, not direct network value \\ \hline
-Vendor $\leftrightarrow$ Vendor & Low ($-$) & Competition for the same clients, some shared skills and tools \\ \hline
+Clients $\rightarrow$ Vendors & High & Positive, indirect, cross-side (type 4): vendors follow the installed base. \\ \hline
+Vendors $\rightarrow$ Clients & Medium & Positive, indirect, cross-side; risk of type 8 ``app gap'' while the vendor side is thin. \\ \hline
+Client $\leftrightarrow$ Client & Low (+) & No direct effect; weak bandwagon effect from reference clients (Section 2.2.1). \\ \hline
+Vendor $\leftrightarrow$ Vendor & Low ($-$) & Competition for the same clients. \\ \hline
 \end{tabular}
-\caption{Cross-side and same-side effects on PREMI3NS (qualitative assessments)}
+\caption{Network effects between clients and vendors}
 \label{tab:effects}
 \end{table}
 
 \subsubsection{Pricing Architecture}
 
-MSP Theory states that the platform should subsidise the side that is more price sensitive and creates more value for the other side, and it should charge the side whose demand is less elastic \parencite{rochet2006, parker2005}. A new platform must also get one side on board first to solve the chicken-and-egg problem \parencite{caillaud2003}. 
 
-The client side is partly documented. S3NS published a catalogue price list in euros. Each service is billed per unit used, for instance per vCPU hour or per gigabyte per month. Many services offer a free usage tier, and clients who commit for one or three years get lower unit prices \parencite{s3nsprices}. For a standard C3 compute core, the one-year price is about 28\% lower and the three-year price about 46\% lower than the pay-as-you-go price. This confirms that the clients are the money side. It also shows a pricing tool that matters for Section~\ref{sec:PathDependency}. The commitment discount trades a lower-price today for a longer tie to the platform, so it strengthens lock-in. Clients with sensitive data accept this because the law and the small number of qualified providers make their demand less price elastic. Private firms have more choice, and negotiated commitments let S3NS offer them a lower effective price than state buyers who have to use a qualified cloud. 
 
-The complementor side is not documented, so we build it from theory. Since the ISV part is still small \parencite{futurum2026} and vendors multi-home, they should be subsidised through low or zero platform fees, technical help with porting and support toward qualification (A2). The SAP deal shows another kind of subsidy. Thales, one of the alliance partners, became the first customer of SAP on PREMI3NS \parencite{thalessap2026}. This guaranteed demand lowers SAP's risk of joining. The alliance uses one of its own partners as an anchor client to attract the other side. 
+It is common for one group on an MSP to subsidise another, and some platforms earn all their revenue from a single side \cite[slide 40]{windekilde2026msp}. Theory says the platform should subsidise the side that is more price sensitive and creates more value for the other side, and charge the sides whose demand is less elastic \cite{rochet2006, parker2005}. A new platform must also solve the chicken-and-egg problem by bringing on side on board first \cite{caillaud2003}, and free pricing is the standard way to overcome slow initial adoption \cite[slide 3]{windekilde2026msp}.
+
+
+The client side is partly documented. S3NS published a catalogue price list in euros. Each service is billed per unit used, for instance per vCPU hour or per gigabyte per month. Many services offer a free usage tier, and clients who commit for one or three years get lower unit prices \parencite{s3nsprices}. The free tiers lower the cost of testing the platform for every user, which fits the course argument for free pricing at launch. For a standard C3 compute core, the one-year price is about 28\% lower and the three-year price about 46\% lower than the pay-as-you-go price. This confirms that the clients are the money side. It also shows a pricing tool that matters for Section~\ref{sec:PathDependency}. The commitment discount trades a lower-price today for a longer tie to the platform, so it strengthens lock-in. Clients with sensitive data accept this because the law and the small number of qualified providers make their demand less price elastic. 
+
+The complementor side is not documented, so we build it from theory. Since the ISV part is still small \parencite{futurum2026} and vendors multi-home, they should be subsidised through low or zero platform fees, technical help with porting and support toward qualification (A2). The SAP deal shows another kind of subsidy. Thales, one of the alliance partners, became the first customer of SAP on PREMI3NS \parencite{thalessap2026}. This guaranteed demand lowers SAP's risk of joining. The alliance uses one of its own partners as an anchor client to attract the other side. In course terms, the alliance pools its installed base: Thales brings its own demand to help the platform reach critical mass \cite[slide 38]{windekilde2026msp}.
 
 Table~\ref{tab:pricing} summarises the architecture.
 
