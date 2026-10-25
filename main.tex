@@ -9,7 +9,7 @@
 % submitting and every \guide{...} disappears.
 \newif\ifshowguidance
 \showguidancetrue
-% \showguidancefalse   % <- uncomment before submission
+\showguidancefalse   % <- uncomment before submission
 
 % ---------- Packages -------------------------------------------------
 \usepackage[utf8]{inputenc}
@@ -30,9 +30,24 @@
 \usepackage{caption}
 \usepackage{pdflscape}
 \usepackage{pdfpages}   % for including the NTNU AI declaration form
+\usetikzlibrary{arrows.meta} 
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,shapes}
-\usepackage[style=ieee,backend=biber]{biblatex}  % numbered citations [1], [2, p. 5]
+% APA 7 reference list (NTNU), numbered citations [1], [2, p. 5] in the text
+\usepackage{csquotes}
+\usepackage[bibstyle=apa,citestyle=numeric-comp,sorting=nyt,backend=biber]{biblatex}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
+\defbibenvironment{bibliography}
+  {\list{\printtext[labelnumberwidth]{\printfield{labelprefix}\printfield{labelnumber}}}
+    {\setlength{\labelwidth}{\labelnumberwidth}%
+     \setlength{\leftmargin}{\labelwidth}%
+     \setlength{\labelsep}{\biblabelsep}%
+     \addtolength{\leftmargin}{\labelsep}%
+     \setlength{\itemsep}{\bibitemsep}%
+     \setlength{\parsep}{\bibparsep}}%
+     \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endlist}
+  {\item}
 \addbibresource{references.bib}
 \usepackage[hidelinks]{hyperref}
 
@@ -74,8 +89,8 @@ Arne Skogan
 $\pm$10\%) and at least 6 peer-reviewed sources. Figures, tables, references
 and appendices do not count. Delete this guidance before submitting by
 switching \texttt{\textbackslash showguidancefalse} in main.tex.}
-\IfFileExists{figures/AI-declaration-signed.pdf}{%
-  \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{figures/AI-declaration-signed.pdf}%
+\IfFileExists{figures/AI-declaration-signed2.pdf}{%
+  \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{figures/AI-declaration-signed2.pdf}%
 }{%
   \guide{Signed form not found: upload it as figures/AI-declaration-signed.pdf.}%
 }

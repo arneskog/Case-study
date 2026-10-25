@@ -1,7 +1,5 @@
 \section{Initial AI-Generated Text}
 \label{app:aitext}
-\guide{Raw and unedited, maximum 400 words per task.}
-
 \subsection{Task 1: AI output}
 \begin{quote}\small
 S3NS is a French company established through a partnership between Thales and Google Cloud to provide trusted cloud services for French public-sector organizations and critical-infrastructure operators. Its main stakeholders are S3NS, Thales, Google Cloud, customers, the French National Cybersecurity Agency (ANSSI), and integration partners. S3NS acts as the central cloud service provider, operating and securing the infrastructure while ensuring compliance with French security and data sovereignty requirements. Thales is the majority shareholder and provides cybersecurity expertise, security oversight, and governance. Google Cloud supplies the underlying cloud technology, infrastructure software, and technical updates. Customers, including public institutions and critical-infrastructure operators, use S3NS to host sensitive data and applications while meeting security and regulatory requirements. ANSSI establishes cybersecurity standards and evaluates cloud providers for compliance with its SecNumCloud framework. Integration partners provide complementary software, applications, and services that help customers deploy and use the cloud.
@@ -16,13 +14,37 @@ The key relationships are based on technological, operational, and regulatory de
 
 \subsection{Task 3: AI output}
 \begin{quote}\small
-PREMI3NS, operated by S3NS, functions as a multisided platform connecting three main sides: Google Cloud, which supplies the underlying infrastructure; client organizations, including government agencies and regulated companies, who consume cloud services; and independent software vendors (ISVs), who build applications on top of the platform. ANSSI also participates as a certifying side, since its SecNumCloud qualification signals trust to clients and shapes who can join the ecosystem.
+\section*{PREMI3NS as a Multisided Platform}
 
-Cross-side network effects are strong between clients and ISVs: as more clients adopt PREMI3NS, more software vendors are incentivized to port their applications to the platform, and as more applications become available, the platform becomes more attractive to new clients. There is also a cross-side effect between Google Cloud and clients, since Google's continuous technology updates increase the value clients receive. Same-side effects among clients are positive, because government agencies benchmark against each other and standardize on similar cloud architectures, creating a network effect within the public sector as adoption spreads from one agency to the next.
+\subsection*{Distinct sides}
+\begin{enumerate}
+    \item \textbf{Demand-side users}: French public-sector bodies and regulated private clients (OIVs, essential-service operators, insurance, finance, industry) needing SecNumCloud-qualified, extraterritorial-law-immune cloud for sensitive data.
+    \item \textbf{Technology supply side}: Google Cloud, providing the underlying IaaS, PaaS, CaaS, data and AI services.
+    \item \textbf{Sovereignty/security operator side}: Thales/S3NS, which operates the isolated French infrastructure, encryption, identity, SOC and compliance layer.
+    \item \textbf{Ecosystem partners}: ISVs, system integrators and solution providers that migrate or build applications on the trusted cloud.
+\end{enumerate}
 
-For pricing, PREMI3NS should adopt a freemium model. Clients are charged approximately 15-20\% above standard Google Cloud public pricing, reflecting the added cost of sovereign, SecNumCloud-compliant operation. This premium is justified because clients have few alternative providers meeting the same compliance bar. ISVs should be subsidized heavily, with the platform waiving listing fees for the first two years and offering free credits worth up to €50,000 to encourage early participation, since the platform currently has a limited software ecosystem and needs to solve the chicken-and-egg problem of attracting developers before it can attract more clients.
+\subsection*{Network effects}
 
-Google Cloud, as a foundational side, should also receive favorable terms, since its technology is the core value driver, though it does not pay directly for participation. Over time, as the client base grows, the platform can gradually reduce ISV subsidies as the ecosystem matures and network effects become self-sustaining, similar to how other multisided platforms transition from subsidized growth to a mature pricing structure. This transition would allow S3NS to capture more value from the ISV side once the platform reaches critical mass and vendors depend on the installed client base to reach their own customers.
+\textbf{Cross-side}
+\begin{itemize}
+    \item More regulated users increase the value of Google’s innovation pipeline and Thales’ security investment, because the platform becomes the de-facto compliant route into the French/European public and critical-sector market.
+    \item Richer Google services and stronger Thales controls raise the platform’s attractiveness to additional users who face strict sovereignty requirements.
+    \item A larger user base draws more ISVs and integrators, expanding the solution catalogue and further raising utility for customers.
+\end{itemize}
+
+\textbf{Same-side}
+\begin{itemize}
+    \item Among users: weak positive effects via shared compliance standards and referenceability (early adopters signal legitimacy); mild negative effects if capacity or support is contested.
+    \item Among suppliers/partners: complementary effects (Google tech + Thales controls + ISV apps reinforce one another) dominate over pure competition.
+\end{itemize}
+
+\subsection*{Pricing model}
+Charge the demand side (users) on a usage-based model (compute, storage, managed services) at a premium reflecting the scarcity of SecNumCloud~3.2-qualified capacity and the high willingness-to-pay for legal immunity and French operational control.
+
+Subsidise (or revenue-share favourably with) the technology and operator sides—Google and Thales/S3NS—through favourable commercial terms, co-investment or low platform fees. This accelerates service catalogue growth and operational excellence, the two factors that most strongly attract the high-value regulated users. Ecosystem partners can be charged modest marketplace or certification fees once critical mass is reached, or initially subsidised to seed the application layer.
+
+This follows the classic platform logic of charging the side with lower price sensitivity and higher switching costs while subsidising the sides whose participation creates the strongest cross-side externalities.
 \end{quote}
 
 \subsection{Task 4: AI output}

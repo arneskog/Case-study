@@ -1,97 +1,80 @@
 \subsection{Task 3: Multisided Platform Mapping}
 \label{sec:task3}
 
-
-
-
-
 \subsubsection{Is it really a platform?}
 
-A MSP is a multisided platform that lets two or more distinct groups interact directly, and each group is affiliated with the platform (Øverby
-and Audestad \parencite[p.~150]{overby2021}). This test is important for S3NS. The core PREMI3NS looks like a pipeline. S3NS licences Google Cloud Technology, runs it in France under French control and sells capacity to clients. If that were all, S3NS would be a sovereign reseller, not a platform. 
+An MSP lets two or more distinct groups interact directly, and all groups are affiliated with the platform \parencite[p.~150]{overby2021}. A reseller, by contrast, buys from a producer and sells to a buyer, and the two never interact \parencite[slide 40]{windekilde2026msp}. S3NS licenses Google Cloud technology, runs it in France and sells capacity to clients, and Google never meets the client. For its core service, S3NS is therefore a sovereign reseller.
 
-The lecture "Network Economics\_PathDependency\_MultisidedPlatforms\_2026" separates an MSP from a reseller \cite[slide 40]{windekilde2026msp} \parencite[p.~150]{overby2021})MJAU. A reseller buys from an producer and sells to a buyer, and the two never interact. An MSP enables direct itneraction between groups that are all affiliated with it \parencite[p.~150]{overby2021}). For its core service, S3NSlooks like a reseller: it licences Google Cloud Technology and sells capacity to clients, and Google never meets the client. We argue that PREMI3NS is a hybrid. On top of this reseller core sits a platform layer where clients and software vendors deal with each other directly. SAP, for example, sells its ERP to course lists cloud services among technology platforms \cite[slide 36]{windekilde2026msp}.
+We argue that PREMI3NS is a hybrid. On top of the reseller core sits a platform layer where service partners and independent software vendors (ISVs) deal directly with clients \parencite{s3nsecosystem}. The clearest example is SAP, which agreed to run its RISE private cloud ERP on PREMI3NS \parencite{thalessap2026}. SAP joins to reach regulated clients, and clients join partly because such software is available inside the trusted perimeter. Each group's value depends on the size of the other, which is the defining feature of an MSP \parencite[p.~150]{overby2021}.
 
-Two actors are often wrongly treated as sides. Google supplies technology to the alliance and is paid for it, but does not transact with clients through the platform. ANSSI sets the rules for who may enter the trusted perimeter. Both shape the platform from outside the market it creates. 
+Google and ANSSI are often wrongly treated as sides. Google supplies technology and is paid for it, and ANSSI sets the rules for entering the trusted perimeter. Neither transacts with clients on the platform, so both shape it from outside (Figure~\ref{fig:msp}).
 
 \subsubsection{The sides}
 
-\textbf{Side 1: Client institutions.} This side is divided into two groups with their own need. The first is French state administration. When they host particularly sensitive
-data with a private cloud provider, they must use a service qualified by ANSSI
-(in practice SecNumCloud) or certified at EU level. This requirement was written
-into law through article 31 of the 2024 SREN law, with an implementing decree
-adopted in April 2026 \parencite{decretsren2026}. The second group is large companies in regulated sectors. Around ~30 early adopters tested the PREMI3NS before qualification, and EDF and Thales itself are named users \parencite{s3ns2025premi3ns}. For these firms, trusted cloud is a strategic choice and not a legal duty. Both groups face high switching costs once they have migrated. Their value proporsition is modern cloud services that can legally host sensitive data and are shielded from extraterritorial law. 
+\textbf{Side 1: Client institutions.} This side has two groups. The first is the French state administration, which must use a service qualified by ANSSI (in practice SecNumCloud) or certified at EU level when it hosts particularly sensitive data with a private provider. This was written into law through Article 31 of the 2024 SREN law, with an implementing decree adopted in April 2026 \parencite{decretsren2026}. The second is large companies in regulated sectors: around 30 early adopters tested PREMI3NS before qualification, and EDF and Thales itself are named users \parencite{s3ns2025premi3ns}. For them, trusted cloud is a strategic choice, not a legal duty. Both face high switching costs after migrating. Their value proposition is modern cloud services that can legally host sensitive data and are shielded from extraterritorial law.
 
-
-
-\textbf{Side 2: Complementors.} These are ISVs, SaaS providers and service partners (integrator and consultancies). They must invest to port to qualify their products, and most can also offer them on competing trusted clouds, so they multi-home. An industry analysis describes the ISV model on PREMI3NS as still at an early stage \parencite{futurum2026}. This means the platform does not yet have a large complementor side, which is exactly the chicken-and-egg problem MSP theory describes. Their value proporsition is access to regulated clients they could not otherwise serve, without building their own qualified infrastructure. 
-
+\textbf{Side 2: Complementors.} These are ISVs, SaaS providers and service partners (integrators and consultancies). They must invest to port and qualify their products and can also offer them on competing trusted clouds, so they multi-home. The ISV model is still at an early stage \parencite{futurum2026}, which is the chicken-and-egg problem of MSP theory \parencite{caillaud2003}. Their value proposition is access to regulated clients without building their own qualified infrastructure.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.90\linewidth]{figures/msp-map.png}
-    \caption{Multisided Platform Map of PREMI3NS. Solid lines are platform sides, dashed lines are suppliers and regulators outside the platform market}
+    \caption{Multisided platform map of PREMI3NS. Solid boxes are the two platform sides; dashed boxes are a supplier and a regulator outside the platform market}
     \label{fig:msp}
 \end{figure}
 
 \subsubsection{Cross-side and same-side effects}
 
-Table~\ref{tab:effects} classifies the effects using the course typology \cite[slides 14--23]{windekilde2026msp}. The strongest effect runs from clients to vendors. It is a positive, indirect, cross-side effect: like app developers on iOS, vendors respond to the size of the installed base rather than to invidual clients \cite[slide 19]{windekilde2026msp}. Every new regulated client enlarges a market for SexNumCloud-ready software that barely existed before qualification. The effect from vendors to clients is positive but weaker. A client can only move a workload if the software it needs is available, as the SAP case shows, but many clients build their own applications and Google compatibility already gives them familiar tools. While the vendor side is thin, the same mechanism can run in reverse. Too few applications keep clients away, and toofew clients keep vendors away, the "app gap" that hurt Windows phone \cite[slide 23]{windekilde2026msp}.
+Table~\ref{tab:effects} classifies the effects using the course typology \parencite[slides 14--23]{windekilde2026msp}. The strongest effect runs from clients to vendors. Like app developers on iOS, vendors respond to the size of the installed base \parencite[slide 19]{windekilde2026msp}, and every new regulated client enlarges a market that barely existed before qualification. The reverse effect is weaker, since many clients build their own applications. While the vendor side is thin, the mechanism can also run backwards: too few applications keep clients away, and too few clients keep vendors away, the ``app gap'' that hurt Windows Phone \parencite[slide 23]{windekilde2026msp}.
 
-Same-side effects are weak. Section~2.2.1 shows that clients do not interact through the platform, so there is no direct same-side effect, only a weak bandwagon effect from reference clients. Among vendors the effect is negative, since more vendors means more competition for the same clients, a pattern the lecture describes for sellers on MSPs \cite[slide 40]{windekilde2026msp}. Disintermediation is not a real threat. Clients and vendors cannot meet outside a qualified cloud for sensitive data, so the law keepstheir transaction on qualified platforms \cite[slide 27]{windekilde2026msp}. The competitive risk is instead that vendors multi-home on rival qualified clouds such as bleu. 
-
+Same-side effects are weak. Clients do not interact through the platform (Section~\ref{sec:ValueGrowth}), so there is only a weak bandwagon effect from reference clients, and more vendors mean more competition for the same clients \parencite[slide 40]{windekilde2026msp}. Disintermediation is not a real threat \parencite[slide 27]{windekilde2026msp}, since sensitive data cannot leave a qualified cloud. The real risk is that vendors multi-home on rival qualified clouds such as Bleu.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|p{3.3cm}|p{1.8cm}|p{7.9cm}|}
 \hline
-\textbf{Effect} & \textbf{Strength} & \textbf{Reason} \\ \hline
+\textbf{Effect} & \textbf{Strength} & \textbf{Type and reason} \\ \hline
 Clients $\rightarrow$ Vendors & High & Positive, indirect, cross-side (type 4): vendors follow the installed base. \\ \hline
 Vendors $\rightarrow$ Clients & Medium & Positive, indirect, cross-side; risk of type 8 ``app gap'' while the vendor side is thin. \\ \hline
-Client $\leftrightarrow$ Client & Low (+) & No direct effect; weak bandwagon effect from reference clients (Section 2.2.1). \\ \hline
-Vendor $\leftrightarrow$ Vendor & Low ($-$) & Competition for the same clients. \\ \hline
+Client $\leftrightarrow$ Client & Low (+) & No direct effect; weak bandwagon effect from reference clients (Section~\ref{sec:ValueGrowth}). \\ \hline
+Vendor $\leftrightarrow$ Vendor & Low ($-$) & Negative, same-side: competition for the same clients. \\ \hline
 \end{tabular}
-\caption{Network effects between clients and vendors}
+\caption{Cross-side and same-side effects on PREMI3NS (qualitative assessments)}
 \label{tab:effects}
 \end{table}
 
 \subsubsection{Pricing Architecture}
 
+MSP theory says to subsidise the side that is more price sensitive and creates more value for the other side, and to charge the side whose demand is less elastic \parencite{rochet2006, parker2005}. A new platform must first get one side on board \parencite{caillaud2003}, and free pricing is the standard way to overcome slow initial adoption \parencite[slide 3]{windekilde2026msp}.
 
+S3NS publishes a price list in euros, billed per unit, for instance per vCPU hour or per gigabyte per month, with free usage tiers for many services \parencite{s3nsprices}. Clients who commit for one or three years get lower prices: for a standard C3 compute core, about 28\% and 46\% below pay-as-you-go. Clients are therefore the money side, and the discount buys a longer tie to the platform, which strengthens lock-in (Section~\ref{sec:PathDependency}). Because the list is the same for everyone, we separate the two client groups with theory. State administrations have legally required, price-inelastic demand and pay list prices. Regulated firms choose trusted cloud strategically and can turn to other qualified clouds, so their demand is more elastic and they can expect negotiated discounts (A5).
 
-It is common for one group on an MSP to subsidise another, and some platforms earn all their revenue from a single side \cite[slide 40]{windekilde2026msp}. Theory says the platform should subsidise the side that is more price sensitive and creates more value for the other side, and charge the sides whose demand is less elastic \cite{rochet2006, parker2005}. A new platform must also solve the chicken-and-egg problem by bringing on side on board first \cite{caillaud2003}, and free pricing is the standard way to overcome slow initial adoption \cite[slide 3]{windekilde2026msp}.
-
-
-The client side is partly documented. S3NS published a catalogue price list in euros. Each service is billed per unit used, for instance per vCPU hour or per gigabyte per month. Many services offer a free usage tier, and clients who commit for one or three years get lower unit prices \parencite{s3nsprices}. The free tiers lower the cost of testing the platform for every user, which fits the course argument for free pricing at launch. For a standard C3 compute core, the one-year price is about 28\% lower and the three-year price about 46\% lower than the pay-as-you-go price. This confirms that the clients are the money side. It also shows a pricing tool that matters for Section~\ref{sec:PathDependency}. The commitment discount trades a lower-price today for a longer tie to the platform, so it strengthens lock-in. Clients with sensitive data accept this because the law and the small number of qualified providers make their demand less price elastic. 
-
-The complementor side is not documented, so we build it from theory. Since the ISV part is still small \parencite{futurum2026} and vendors multi-home, they should be subsidised through low or zero platform fees, technical help with porting and support toward qualification (A2). The SAP deal shows another kind of subsidy. Thales, one of the alliance partners, became the first customer of SAP on PREMI3NS \parencite{thalessap2026}. This guaranteed demand lowers SAP's risk of joining. The alliance uses one of its own partners as an anchor client to attract the other side. In course terms, the alliance pools its installed base: Thales brings its own demand to help the platform reach critical mass \cite[slide 38]{windekilde2026msp}.
-
-Table~\ref{tab:pricing} summarises the architecture.
-
+The complementor side is not documented, so we build it from theory. Since the ISV side is small \parencite{futurum2026} and vendors multi-home, they should be subsidised through low or zero fees and porting help (A2). The SAP deal is another kind of subsidy: Thales became SAP's first customer on PREMI3NS \parencite{thalessap2026}, guaranteeing demand. In course terms, the alliance pools its installed base to reach critical mass \parencite[slide 38]{windekilde2026msp}. Table~\ref{tab:pricing} summarises the architecture.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{4.6cm}|>{\raggedright\arraybackslash}p{3.6cm}|}
 \hline
 \textbf{Side} & \textbf{Role} & \textbf{Instruments} & \textbf{Basis} \\ \hline
-State administrations & Pays & List prices, commitment discounts & Price list; legal duty \\ \hline
-Regulated Firms & Pays (less) & Negotiated commitments, free tiers & Price list; theory \\ \hline
+State administrations & Pays & List prices, commitment discounts, free tiers & Price list; legal duty \\ \hline
+Regulated firms & Pays (less) & Negotiated commitment discounts, free tiers & Price list; assumption A5 \\ \hline
 ISVs and service partners & Subsidised & Low fees, porting help, anchor demand & Theory; SAP case \\ \hline
 \end{tabular}
-\caption{Pricing Architecture of PREMI3NS}
+\caption{Pricing architecture of PREMI3NS}
 \label{tab:pricing}
 \end{table}
 
-These prices are likely to change over time. Once clients are locked in a single-home for each workload (A4), competitive bottleneck theory predicts that the platform controls access to them and can start charging the multi-homing side \parencite{armstrong2006}. S3NS could then introduce fees for listing and certifying vendor solutions. The vendor subsidy is therefore likely to be temporary. 
+These prices are likely to change. Once clients are locked in and single-home (A4), competitive bottleneck theory predicts that the platform can start charging the multi-homing side \parencite{armstrong2006}, so the vendor subsidy is likely to be temporary.
 
-The alliance structure decides who funds the subsidy. Client revenue flows to S3NS, and part of it goes to Google as licence fees (A3). Google therefore shares in the growth of the paying side, while the cost of subsidising vendors falls mostly on Thales, through S3NS and through its own role as anchor client. At the same time, software built for PREMI3NS uses Google technology, so Google gains from the subsidy without paying for it. This uneven split is a real tension inside the alliance. It also matters for Section~\ref{sec:task4}, because the clients who pay are the ones who carry most of the loss if the platform is breached. 
+The alliance structure decides who funds the subsidy. Part of client revenue flows to Google as licence fees (A3), so Google shares in the growth of the paying side, while the cost of subsidising vendors falls mostly on Thales, through S3NS and as anchor client. Yet software built for PREMI3NS uses Google technology, so Google gains without paying. This uneven split is a real tension inside the alliance, and it matters for Section~\ref{sec:task4}, because the clients who pay carry most of the loss if the platform is breached.
 
 \subsubsection{Assumptions}
 
 \begin{description}
-  \item[A1.] PREMI3NS unit prices include a premium over standard Google Cloud prices for comparable services. We did not compare the two price lists line by line. The assumption rests on the extra cost of sovereign operation: separate infrastructure, French staff and quarantine zone where every Google update is checked before use \parencite{s3ns2025premi3ns}.
-  \item[A2.] Vendors are price sensitive and multi-home. The ISV model is still young \parencite{futurum2026}, and vendors can also qualify their products on competing trusted clouds.
-  \item[A3.] Google is paid through the licence fees that grow with usage. The contract is not public. If the fee were fixed instead, Thales would carry all the volume risk. 
+  \item[A1.] PREMI3NS unit prices include a premium over Google Cloud prices, because of sovereign operation: separate infrastructure, French staff and a quarantine zone for Google updates \parencite{s3ns2025premi3ns}. We did not compare the price lists line by line.
+  \item[A2.] Vendors are price sensitive and multi-home. The ISV model is still young \parencite{futurum2026}, and vendors can qualify on competing trusted clouds.
+  \item[A3.] Google is paid through usage-based licence fees. The contract is not public; with a fixed fee, Thales would carry all the volume risk.
   \item[A4.] After migration, each client workload effectively single-homes, because of the switching costs identified in Section~\ref{sec:PathDependency} and the multi-year commitments in the price list.
+  \item[A5.] State administrations pay list prices, while large regulated firms may obtain negotiated discounts. The price list does not disclose negotiated terms, so this follows the elasticity logic of MSP theory \parencite{rochet2006}.
 \end{description}
+
 
