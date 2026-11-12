@@ -82,24 +82,27 @@ The answer invents no prices and leaves the premium unquantified, as the price l
 % =====================================================================
 \subsection{Task 4: Cybersecurity Economics}
 
-\aiprompt{\fillin{ChatGPT, 6.1, 04/10/2026}}{\fillin{S3NS is a trusted cloud alliance between Thales and Google Cloud. S3NS is a French company fully controlled by Thales, and it operates the PREMI3NS cloud service for French public-sector and regulated private-sector clients, using licensed Google Cloud technology. PREMI3NS holds the SecNumCloud qualification from ANSSI. Software vendors and integration partners also run services on the platform. Treat platform security as a good provided jointly by the alliance partners. Explain how cybersecurity responsibility and investment should be allocated between Thales/S3NS and Google Cloud, and which parts of the attack surface each partner controls. Identify who would bear the losses if the platform were breached. Finally, assess whether sovereign domestic hosting in France makes the platform more secure. Limit your answer to 400 words.}}
+\aiprompt{ChatGPT, 6.1, 04/10/2026}{S3NS is a trusted cloud alliance between Thales and Google Cloud. S3NS is a French company fully controlled by Thales, and it operates the PREMI3NS cloud service for French public-sector and regulated private-sector clients, using licensed Google Cloud technology. PREMI3NS holds the SecNumCloud qualification from ANSSI. Software vendors and integration partners also run services on the platform. Treat platform security as a good provided jointly by the alliance partners. Explain how cybersecurity responsibility and investment should be allocated between Thales/S3NS and Google Cloud, and which parts of the attack surface each partner controls. Identify who would bear the losses if the platform were breached. Finally, assess whether sovereign domestic hosting in France makes the platform more secure. Limit your answer to 400 words.}
 
 \paragraph{Claims checked.}
-There is no invented numbers in this AI output. Below is claimed which have been checked and how we evaluate them.
-
-That S3NS exclusively operates in France and that there is quarantines, ananlyses and validations of the technology before it gets deployed. A claim that is correctly stated according to \parencite{s3ns2025premi3ns}. Additionally, the AI claims that ANSSI warns about that the qualification of a cloud offer dont establish the security of applications hosting on it. A claim that is confirmed by ANSSI FAQ which says that the qualification itself does not guarantee clients service level \parencite{anssi_faq}. 
+The AI has no invented numbers. That S3NS operates PREMI3NS alone and checks all updates is correct \parencite{s3ns2025premi3ns}. That a qualified cloud does not make the applications on it secure is also correct \parencite{anssi_faq}.
 
 \paragraph{Errors found and corrected.}
-\fillin{For each error: the flaw, the course concept that exposes it, the
-evidence, and how the main text changed}
+First, the AI says the partner with the lowest cost should invest. This only works for total effort \cite[p.~1]{varian2004}, but most of PREMI3NS is weakest link, where the least protected participant decides the security \cite[slide 21]{kianpour2026slides}.
+
+Second, the AI ignores the losses of clients, end users and society, who are not part of the partners' contracts. Each actor only counts its own loss, so together they spend too little \cite[slide 15]{kianpour2026slides}.
+
+Third, the AI misses that vendors lose the least and are the subsidised side (Section~\ref{sec:task3}), which makes them the weakest link. We show this in the main text.
+
+Fourth, the AI says Google loses licence revenue without a source. We marked this as an assumption.
 
 % =====================================================================
 \subsection{Task 5: Business Model Structure}
 
-\aiprompt{\fillin{Tool, version, date}}{\fillin{Paste the prompt exactly}}
+\aiprompt{ChatGPT, 6.1, 04/10/2026}{S3NS is a alliance between Thales and Google Cloudproviding a trusted cloud. It is a French company and controlled by Thales, and operates the product PREMI3NS which is a SecNumCloud-qualified cloud product used by French public-sector. Create a full Business Model Canvas for the alliance. MAke also a stakeholder relationship model showing key stakeholders, relationships and the dependencies between them in addition to any positive or negative network effects. Answer in 400 words}
 
 \paragraph{Claims checked.}
-AI mentions that SecNumCloud gives protection against non-european regulations which is correct according to \cite{s3ns2025premi3ns}. The netword effects between clients and vendors (+/+) is considered correctly and in line with our proposed stakeholder relationship model. It also claims that S3NS is dependent of google for its technology which we also agree in. 
+AI mentions that SecNumCloud gives protection against non-european regulations which is correct according to \cite{s3ns2025premi3ns}. It correctly mentions a positive network effect between clients and vendors. It also claims that S3NS is dependent of google for its technology which we also agree in. 
 
 \paragraph{Errors found and corrected.}
 The customer segments only have one side. Vendors and other service partners lack their own side and in the value proposition they are left out. The money-flows between the partners is missing.   

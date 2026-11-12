@@ -28,8 +28,7 @@ weakest link setting \cite[slide 21]{kianpour2026slides}.
 
 Interfaces and applications are also a weakest link, because many clients and vendors connect to the same platform, and one participant can weaken security for all \cite[slide 21]{kianpour2026slides}.
 
-To conclude, the strength of security on PREMI3NS varies. The core,
-protected by Google and S3NS, is already well protected. Client systems
+To conclude, the strength of security on PREMI3NS varies. The core is well protected, but depends on one provider. Client systems
 and vendor applications are where the weak spots are. With many different
 parties involved, the weakest link is where a potential security breach is
 most likely to happen. The structure of each layer is summarised in Table~\ref{tab:provision}. 
@@ -76,13 +75,13 @@ Revenue, SecNumCloud qualification, reputation &
 Operations, admin access, update validation &
 Low: controls much of what it loses \\
 Google Cloud & High (generic), Low (PREMI3NS-specific) & Low--Medium &
-Licence revenue, reputation of the model &
+Licence revenue (assumed), reputation of the model &
 Code and update content &
 Medium: controls the core, bears little of the loss \\
 ISVs and service partners & Low & Low &
 Lost sales on one of several clouds &
 Applications, migration access &
-High: weakest-link interface, subsidised, multi-home \\
+High: weakest-link interface, subsidised (assumed), multi-home \\
 Client institution & Medium & High &
 Data loss, service stop, legal exposure &
 Own configuration only &
@@ -95,7 +94,7 @@ Full: loss without any decision \\
 \end{tabularx}
 \end{table}
 
-As argued in Section~\ref{sec:task3} the vendors are price sensitive and can offer products on other trusted clouds at the same time. Therefore a breach on PREMI3NS would not harm them much, since they can sell other trusted clouds. Note that there will still be a small harm, for example in their reputation and customers trust. As their software exists in a weakest-link layer, the participant with the least gain relatively to its cost decides the collective security \cite[p.~4]{varian2004}. Because the vendors are the subsidised side, the side that PREMI3NS subsidises is also the side setting the collective security level (Assumptions).
+As argued in Section~\ref{sec:task3} the vendors are price sensitive and can offer products on other trusted clouds at the same time. Therefore a breach on PREMI3NS would not harm them much, since they can sell other trusted clouds. Note that there will still be a small harm, for example in their reputation and customers trust. As their software exists in a weakest-link layer, and they have the least to lose, they are likely to be the least-protected participant, which sets the security for everyone \cite[slide 21]{kianpour2026slides}. Because the vendors are the subsidised side, the side that PREMI3NS subsidises is also the side setting the collective security level (Assumptions).
 
 In the alliance there is an imbalance, since Google writes the code, but if there is a security breach in PREMI3NS, Thales and S3NS are the ones who mainly experience losses. We assume they could in the instance of a breach loose both the SecNumClouds approval and their reputation. This is a weakness, as we know problems arise if the one who can protect a system is not the one who suffers if the security fails \cite[p.~358]{anderson2001}. 
 
