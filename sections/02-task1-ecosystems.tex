@@ -45,7 +45,7 @@ consumers are easy to overlook but can decide a firm's survival.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{figures/ecosystem.jpg}
+    \includegraphics[width=0.85\linewidth]{mjaumjau.png}
     \caption{Business ecosystem of S3NS. The blue box is the alliance, grey
     boxes are direct stakeholders and orange boxes indirect stakeholders. An
     arrow from A to B means that A depends on B, and a double arrow means mutual
@@ -55,7 +55,6 @@ consumers are easy to overlook but can decide a firm's survival.
     and control.}
     \label{fig:ecosystem}
 \end{figure}
-
 
 
 \subsubsection{Critical relationships and dependencies}
@@ -74,9 +73,18 @@ main risk. Google's technology is closely tied to the service and has no ready
 substitute; it is co-specialised and has low fungibility
 \parencite[slide~30]{windekilde2026ecosystem}. S3NS could not switch provider
 without rebuilding its service, and clients inherit this dependency through
-S3NS, since their systems are built on Google-based services.
-
-\tbd{Fagfellevurderingen spurte hva som skjer hvis Google presser gjennom en oppdatering, slutter å levere oppdateringer, eller blir pålagt av amerikanske myndigheter å endre tjenesten slik at den bryter SecNumCloud-kravene. Dette er fortsatt ikke besvart. Legg til 2--3 setninger her: hva karantenesonen kan og ikke kan stoppe, hvor lenge S3NS kan drifte uten nye Google-oppdateringer, og hva det betyr for avhengigheten (kilde: S3NS/ANSSI eller presse).}
+S3NS, since their systems are built on Google-based services. The quarantine zone limits this risk but does not remove it. Because S3NS
+takes a few days to check each update and may audit the source code
+\parencite{paperjam2026}, a harmful or non-compliant update, including one
+changed at the request of US authorities, can be stopped before production.
+SecNumCloud also forbids a technology provider from suspending a service run by
+a qualified European operator \parencite{solutionsnumeriques2026}. The
+quarantine cannot, however, replace Google's updates. If they stop, S3NS can
+keep running its current version, but ANSSI notes that a lasting loss of
+updates would in time lower the security level \parencite{solutionsnumeriques2026},
+and S3NS itself calls full autonomy unrealistic \parencite{paperjam2026}. We
+found no source stating how long S3NS could operate without new updates. The
+quarantine therefore protects control of the service, but not its continuity.
 
 The second is the single arrow from the alliance down to ANSSI. The alliance
 depends on the qualification, while ANSSI does not depend on the alliance.
