@@ -25,6 +25,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{soul} % \hl{...} = yellow highlight
 \usepackage{amsmath,amssymb}
 \usepackage{float}
 \usepackage{caption}
@@ -32,21 +33,10 @@
 \usepackage{pdfpages}   % for including the NTNU AI declaration form
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,shapes}
-% APA 7 reference list (NTNU), numbered citations [1], [2, p. 5] in the text
+% APA 7 (NTNU): author-date citations in the text, e.g. (Adner, 2017),
+% and an alphabetical reference list with hanging indent (biblatex-apa)
 \usepackage{csquotes}
-\usepackage[bibstyle=apa,citestyle=numeric-comp,sorting=nyt,backend=biber]{biblatex}
-\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
-\defbibenvironment{bibliography}
-  {\list{\printtext[labelnumberwidth]{\printfield{labelprefix}\printfield{labelnumber}}}
-    {\setlength{\labelwidth}{\labelnumberwidth}%
-     \setlength{\leftmargin}{\labelwidth}%
-     \setlength{\labelsep}{\biblabelsep}%
-     \addtolength{\leftmargin}{\labelsep}%
-     \setlength{\itemsep}{\bibitemsep}%
-     \setlength{\parsep}{\bibparsep}}%
-     \renewcommand*{\makelabel}[1]{\hss##1}}
-  {\endlist}
-  {\item}
+\usepackage[style=apa,backend=biber]{biblatex}
 \addbibresource{references.bib}
 \usepackage[hidelinks]{hyperref}
 
@@ -54,6 +44,10 @@
 \definecolor{guidegray}{gray}{0.45}
 \newcommand{\guide}[1]{\ifshowguidance{\color{guidegray}\itshape #1\par}\fi}
 \newcommand{\fillin}[1]{\textbf{[#1]}}
+% Red TBD marker for missing content (remove every \tbd before submission)
+\newcommand{\tbd}[1]{{\color{red}\textbf{TBD:} #1}}
+% Yellow box for new text the group should review (remove before submission)
+\newcommand{\gul}[1]{\par\noindent\colorbox{yellow}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{#1}}\par}
 % Placeholder box for a figure you have not made yet.
 % Replace with \includegraphics[width=\linewidth]{figures/yourfile.png}
 \newcommand{\placeholder}[2][6cm]{%
@@ -65,36 +59,51 @@
 \newcommand{\alliancename}{S3NS}
 \newcommand{\groupnumber}{106}
 
-% NTNU logo above the title (file uploaded to the figures folder)
-\title{\includegraphics[width=0.45\linewidth]{figures/NTNU hovedlogo - farger - bredde.png}\\[1.5cm]
-Case Study of S3NS\\[4pt]}
-\author{TTM4165 Digital Economics\\[6pt]
-% Remove the names below for the anonymous 28 October peer-review version
-\normalsize
-\begin{tabular}{c}
-Sondre Mathias Nedreberg Burud\\
-Even Baanrud: 10528\\
-Anders Alexander H{\ae}rum Eltoft: 10638\\
-Arne Skogan: 10057\\
-Group 106 \\
-Word count: 
-\end{tabular}}
-\date{NTNU, Autumn 2026}
+% Horizontal rule for the title page
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \setcounter{tocdepth}{3}   % show tasks and their parts in the contents
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+\vbox{ }
+\vbox{ }
+\begin{center}
+% Upper part of the page
+\includegraphics[width=0.40\textwidth]{figures/NTNU hovedlogo - farger - bredde.png}\\[1cm]
+\textsc{\LARGE Department of Information Security and Communication Technology}\\[1.5cm]
+\textsc{\Large TTM4165 - Digital Economics}\\[0.5cm]
+\vbox{ }
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries Case Study - Group 106 - S3NS}\\[0.3cm]
+
+\HRule \\[1.5cm]
+
+% Authors (remove for an anonymous version)
+Sondre Mathias Nedreberg Burud: 10031\\
+Even Baanrud: 10528\\
+Anders Alexander H{\ae}rum Eltoft: 10638\\
+Arne Skogan: 10057\\
+Word count: \tbd{fyll inn før levering}
+
+\vfill
+% Bottom of the page
+{\large Autumn 2026}
+\end{center}
+\end{titlepage}
 
 \guide{Target for a group of 4: about 5,000 words (4,500–5,500 is within
 $\pm$10\%) and at least 6 peer-reviewed sources. Figures, tables, references
 and appendices do not count. Delete this guidance before submitting by
 switching \texttt{\textbackslash showguidancefalse} in main.tex.}
-\IfFileExists{figures/AI-declaration-signed2.pdf}{%
-  \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{figures/AI-declaration-signed2.pdf}%
+\IfFileExists{figures/DeclarationAI_CaseStudy_v3.pdf}{%
+  \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{figures/DeclarationAI_CaseStudy_v3.pdf}%
 }{%
   \guide{Signed form not found: upload it as figures/AI-declaration-signed.pdf.}%
 }
+
 \tableofcontents
 \newpage
 

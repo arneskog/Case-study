@@ -15,10 +15,12 @@
     \bottomrule
   \end{tabularx}\par\medskip}
 
+AI outputs were generated with ChatGPT \parencite{openai2026} and Claude \parencite{anthropic2026}; tool versions, dates and prompts are given for each task below.
+
 % =====================================================================
 \subsection{Task 1: Business Ecosystems}
 
-\aiprompt{GPT-5.6 Luna}{I am analyzing S3NS, a partnership between Thales and
+\aiprompt{GPT-5.6 Luna 07.11.2026} {I am analyzing S3NS, a partnership between Thales and
 Google Cloud that provides trusted cloud for French public-sector and
 critical-infrastructure organistations. Identify the stakeholders, state each
 one's role, and describe the key relationships and dependencies between them.
@@ -28,12 +30,12 @@ Keep the answer under 400 words.}
 The core actors and roles are correct \parencite{s3ns2025premi3ns}.
 ``Majority shareholder'' is also correct: S3NS is majority owned and controlled
 by Thales \parencite{thales2022}, while Google holds a minority stake, reported
-at about 20\% \parencite{futurum2026}.
+\hl{at about 20\% - SJekk subsection 2.5.1 er noe inkonsistens her} \parencite{futurum2026}.
 
 \paragraph{Errors found and corrected.}
 \textit{(1) Single-firm view.} The AI centred the ecosystem on S3NS as a hub.
 Using ecosystem-as-structure, we start from the alliance's value proposition
-instead \parencite{adner2017}\parencite[slides~8--13]{windekilde2026ecosystem}.
+instead \parencites{adner2017}[slides~8--13]{windekilde2026ecosystem}.
 
 \textit{(2) Dependency shown as balanced.} S3NS needs Google's technology, but
 Google does not need S3NS. This is a unilateral complementarity \parencite[p.~114]{overby2021}, and the
@@ -47,6 +49,10 @@ stakeholder.
 
 \textit{(4) No indirect actors.} It listed no indirect actors such as the extraterritorial law.
 
+\tbd{Feedback fra gruppe: hver feil skal følge Task~3-formen (1) hva AI-en sa, (2) hvorfor det er feil, med kurskonsept eller kilde, (3) hva vi bruker i stedet. Punkt (4) mangler (2) og (3): vis til skillet mellom direkte og indirekte interessenter (Øverby og Audestad, s.~58) og at vi la til den franske staten, amerikanske myndigheter (CLOUD Act), konkurrenter og sluttbrukere i Figur~1. I punkt (3) mangler begrunnelsen for at den franske staten er lagt til (SREN-loven skaper etterspørselen).}
+
+\paragraph{Reflection.} \tbd{Mangler: hva AI-en var nyttig til og hvor den sviktet for Task~1 (krav A.5 steg 3, og påpekt i fagfellevurderingen).}
+
 
 % =====================================================================
 \subsection{Task 2: Network Effects and Path Dependency}
@@ -58,27 +64,31 @@ Write in English and keep the answer under 400 words.
 }
 
 \paragraph{Claims checked.}
-The claim that switching costs would make S3NS take over the market seemed too strong. We checked Chapter 11 on tipping and market development, and Chapter 12 on customer lock-in \cite{overby2021}. We also checked the statement about customer feedback. S3NS's Early Access review confirms that feedback helped improve its services \cite{s3ns_earlyaccess2025}.
+The claim that switching costs would make S3NS take over the market seemed too strong. We checked Chapter 11 on tipping and market development, and Chapter 12 on customer lock-in \parencite{overby2021}. We also checked the statement about customer feedback. S3NS's Early Access review confirms that feedback helped improve its services \parencite{s3ns_earlyaccess2025}.
 
 \paragraph{Errors found and corrected.}
 The answer confuses keeping existing customers with winning the whole market. High switching costs can keep clients with S3NS, but competing providers can also keep their own clients. Lock-in alone therefore does not show that the market will tip. That conclusion would need evidence that S3NS increasingly attracts customers and partners away from competitors. Section 2.2.3 already argues that several providers can survive despite customer lock-in, so we kept that conclusion rather than the AI's winner-takes-all claim.
+
+\paragraph{Reflection.}\mbox{}{The AI gave a useful first structure. It correctly separated economies of scale from network effects, identified the cross-side effect between clients and vendors, and listed lock-in mechanisms that matched our analysis in Section~\ref{sec:PathDependency}. It failed at the market level: it treated customer lock-in as enough to predict tipping, and ignored multi-cloud procurement and rival sovereign clouds. It described the mechanisms well, but could not judge their strength.}
 
 
 
 % =====================================================================
 \subsection{Task 3: Multisided Platform Mapping}
 
-\aiprompt{Grok 4.5, 07/10/2026}{S3NS is a trusted cloud alliance between Thales and Google Cloud, operating under the brand PREMI3NS for French public-sector and regulated private-sector clients. Treat PREMI3NS as a multisided platform. List the distinct sides that interact through it, explain the cross-side and same-side network effects between them, and propose a pricing model: which side should be charged and which side should be subsidised, and why. Limit your answer to 400 words.}
+\aiprompt{Claude Sonnet 5, 07/10/2026}{S3NS is a trusted cloud alliance between Thales and Google Cloud, operating under the brand PREMI3NS for French public-sector and regulated private-sector clients. Treat PREMI3NS as a multisided platform. List the distinct sides that interact through it, explain the cross-side and same-side network effects between them, and propose a pricing model: which side should be charged and which side should be subsidised, and why. Limit your answer to 400 words.}
 
 \paragraph{Claims checked.}
-The answer invents no prices and leaves the premium unquantified, as the price list does \parencite{s3nsprices}. We checked it against the price list, the course and the case sources. Three claims hold: usage-based pricing of clients matches the per-unit price list, the client and ISV sides exist \parencite{s3nsecosystem}, and the effect from clients to ISVs and the weak same-side effect among clients match Table~\ref{tab:effects}.
+The answer invents no prices. It leaves the premium unquantified, although the S3NS CEO puts it at about 15--20\% above public Google Cloud \parencite{paperjam2026}. We checked it against the price list, the course and the case sources. Three claims hold: usage-based pricing of clients matches the per-unit price list, the client and ISV sides exist \parencite{s3nsecosystem}, and the effect from clients to ISVs and the weak same-side effect among clients match Table~\ref{tab:effects}.
 
 \paragraph{Errors found and corrected.}
-\textit{(1) Platform owners treated as sides.} The AI lists Google (supply side) and Thales/S3NS (operator side) next to clients and ISVs. Sides are user groups that interact through the platform \parencite[p.~150]{overby2021}. Google is a supplier, as in the reseller model \parencite[slide 40]{windekilde2026msp}, and S3NS is the platform itself. We kept two sides, clients and complementors (Figure~\ref{fig:msp}).
+\textit{(1) Alliance partners treated as sides.} The AI lists Google (supply side) and Thales/S3NS (operator side) next to clients and ISVs. Sides are user groups that interact through the platform \parencite[p.~150]{overby2021}. Google is a supplier, as in the reseller model \parencite[slide 40]{windekilde2026msp}, and S3NS is the platform itself. We kept two sides, clients and complementors (Figure~\ref{fig:msp}).
 
 \textit{(2) Subsidy logic contradicts MSP theory.} It subsidises Google and Thales, the alliance partners, although a subsidy belongs to a price-sensitive user side that creates value for the other side \parencite{rochet2006}, as its own final sentence says. It leaves ISV pricing open (``charged \ldots{} or subsidised'') although the ISV side is small and multi-homing \parencite{futurum2026}, and it does not say who funds the subsidy. We subsidise the ISVs, show that Thales funds this as anchor client in the SAP case \parencite{thalessap2026}, and expect fees later \parencite{armstrong2006}.
 
-\textit{(3) Concepts misclassified.} More users raising the value of ``Google's innovation pipeline'' is supply-side economies of scale, not a network effect \parencite[p.~124]{overby2021}, \parencite[slide 5]{windekilde2026msp}, and the scale belongs to Google (Section~\ref{sec:ValueGrowth}). The ``complementary effects'' among Google, Thales and ISVs are complementarities, unilateral between Google and S3NS \parencite[p.~114]{overby2021}, not same-side effects. Among ISVs the same-side effect is competition (Table~\ref{tab:effects}).
+\textit{(3) Concepts misclassified.} More users raising the value of ``Google's innovation pipeline'' is supply-side economies of scale, not a network effect \parencites[p.~124]{overby2021}[slide~5]{windekilde2026msp}, and the scale belongs to Google (Section~\ref{sec:ValueGrowth}). The ``complementary effects'' among Google, Thales and ISVs are complementarities, unilateral between Google and S3NS \parencite[p.~114]{overby2021}, not same-side effects. Among ISVs the same-side effect is competition (Table~\ref{tab:effects}).
+
+\paragraph{Reflection.} The AI was useful for listing the user groups and the direction of the main cross-side effect, and it did not invent prices. It failed on the MSP logic itself: it treated suppliers as sides and subsidised the partners instead of a user side, so the pricing architecture in Section~\ref{sec:task3} had to be built from MSP theory.
 
 % =====================================================================
 \subsection{Task 4: Cybersecurity Economics}
@@ -89,13 +99,13 @@ The answer invents no prices and leaves the premium unquantified, as the price l
 The AI has no invented numbers. That S3NS operates PREMI3NS alone and checks all updates is correct \parencite{s3ns2025premi3ns}. That a qualified cloud does not make the applications on it secure is also correct \parencite{anssi_faq}.
 
 \paragraph{Errors found and corrected.}
-First, the AI says the partner with the lowest cost should invest. This only works for total effort \cite[p.~1]{varian2004}, but most of PREMI3NS is weakest link, where the least protected participant decides the security \cite[slide 21]{kianpour2026slides}.
+First, the AI says the partner with the lowest cost should invest. This only works for total effort \parencite[p.~1]{varian2004}, but most of PREMI3NS is weakest link, where the least protected participant decides the security \parencite[slide 21]{kianpour2026slides}.
 
 Second, the AI lists the losses of clients, end users and society, but relies on
 contracts between the partners to allocate them. These actors are not part of those
 contracts, so their losses are never internalised. Each partner weighs only its own
 loss, and together they therefore spend less than the social optimum would suggest
-\cite[slide 15]{kianpour2026slides}.
+\parencite[slide 15]{kianpour2026slides}.
 
 Third, the AI misses that vendors lose the least and are the subsidised side (Section~\ref{sec:task3}), which makes them the weakest link. We show this in the main text.
 
@@ -112,7 +122,11 @@ the vendors.
 \aiprompt{ChatGPT, 6.1, 04/10/2026}{S3NS is a alliance between Thales and Google Cloudproviding a trusted cloud. It is a French company and controlled by Thales, and operates the product PREMI3NS which is a SecNumCloud-qualified cloud product used by French public-sector. Create a full Business Model Canvas for the alliance. MAke also a stakeholder relationship model showing key stakeholders, relationships and the dependencies between them in addition to any positive or negative network effects. Answer in 400 words}
 
 \paragraph{Claims checked.}
-AI mentions that SecNumCloud gives protection against non-european regulations which is correct according to \cite{s3ns2025premi3ns}. It correctly mentions a positive network effect between clients and vendors. It also claims that S3NS is dependent of google for its technology which we also agree in. 
+AI mentions that SecNumCloud gives protection against non-european regulations which is correct according to \parencite{s3ns2025premi3ns}. It correctly mentions a positive network effect between clients and vendors. It also claims that S3NS is dependent of google for its technology which we also agree in. 
 
 \paragraph{Errors found and corrected.}
-The customer segments only have one side. We added vendors as a second segment, with their value proposition being 
+The customer segments only have one side. We added vendors as a second segment, with their value proposition being \tbd{setningen er avbrutt; fullfør den.}
+
+\tbd{Feedback: feilene i Task~5 er ikke underbygget. For hver feil: hva AI-en sa, hvorfor det er feil (kurskonsept eller kilde) og hva vi bruker i stedet. Kandidater fra AI-teksten i Appendix~B: bare én kundegruppe (MSP, Task~3); ANSSI listet som Key Partner selv om den er regulator; Thales listet som kilde til ``operational control'' selv om S3NS drifter; ``SecNumCloud 3.2'' og ``ongoing research and development'' i kostnadsstrukturen uten kilde; SRM viser alle relasjoner som gjensidige og mangler +/$-$-merking (Øverby og Audestad, s.~288--289).}
+
+\paragraph{Reflection.} \tbd{Mangler: hva AI-en var nyttig til og hvor den sviktet for Task~5.}
