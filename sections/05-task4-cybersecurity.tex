@@ -5,7 +5,7 @@ lecture. Identify the provision structure, map costs and losses per actor,
 show at least one incentive asymmetry, and discuss correcting instruments.
 Use qualitative levels or clearly labelled illustrative assumptions only.}
 
-On a shared platform, security can be a complex but important part. This section will examine the cybersecurity economics of S3NS. 
+On a shared platform, security can be a complex but important part. This section will examine the cybersecurity economics of S3NS, with security treated as a jointly provided good. 
 
 \subsubsection{Provision structure}
 
@@ -16,7 +16,7 @@ close to best shot. The software is Google´s and every
 update gets analysed and validated by S3NS before it is deployed
 \parencite{s3ns2025premi3ns}. Every client on the platform relies on the same core, meaning one provider sets the security level for all. This also mean that if the core fails, everyone fails. \parencite[slide 23]{kianpour2026slides}.
 
-The identity and operations layer is considered closer to a weakest link. One compromised administrator account or a badly configured access policy can open the system to attack regardless of the strength of the rest of the platform. Shared identity and login systems are a typical weakest link setting, as \cite[slide 21]{kianpour2026slides} mentions.
+The identity and operations layer is considered closer to a weakest link. One compromised administrator account or a badly configured access policy can open the system to attack regardless of the strength of the rest of the platform. Shared identity and login systems are a typical weakest link setting \parencite[slide 21]{kianpour2026slides}.
 
 Client organisations connected to a common platform are also a typical
 weakest-link setting \parencite[slide 21]{kianpour2026slides}, and this
@@ -71,7 +71,7 @@ Thales / S3NS & High & High &
 Revenue, qualification, reputation &
 Operations, admin access, update checks &
 Low--Medium: controls operations, not the code \\
-Google Cloud & Low (PREMI3NS-specific) & Low--Medium &
+Google Cloud & Low & Low--Medium &
 Licence revenue (assumed), reputation &
 Code and updates &
 Medium: controls the code, loses little; S3NS checks limit it \\
