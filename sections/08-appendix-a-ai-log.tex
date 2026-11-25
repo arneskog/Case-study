@@ -110,7 +110,7 @@ The answer invents no prices. It leaves the premium unquantified, although the S
 % =====================================================================
 \subsection{Task 4: Cybersecurity Economics}
 
-\aiprompt{ChatGPT, 6.1, 04/10/2026}{S3NS is a trusted cloud alliance between Thales and Google Cloud. S3NS is a French company controlled by Thales, and it operates the PREMI3NS cloud service. Software vendors and integration partners also run services on the platform. Treat platform security as a good provided jointly by the alliance partners. Explain how cybersecurity responsibility and investment should be allocated between Thales/S3NS and Google Cloud, and which parts of this each partner controls. Identify who would bear the losses in case the platform suffers a breach. Finally, assess whether sovereign domestic hosting in France makes the platform more secure. Limit your answer to 400 words.}
+\aiprompt{ChatGPT, 6.1, 04/10/2026}{S3NS is a trusted cloud alliance between Thales and Google Cloud. S3NS is a French company fully controlled by Thales, and it operates the PREMI3NS cloud service for French public-sector and regulated private-sector clients, using licensed Google Cloud technology. PREMI3NS holds the SecNumCloud qualification from ANSSI. Software vendors and integration partners also run services on the platform. Treat platform security as a good provided jointly by the alliance partners. Explain how cybersecurity responsibility and investment should be allocated between Thales/S3NS and Google Cloud, and which parts of the attack surface each partner controls. Identify who would bear the losses if the platform were breached. Finally, assess whether sovereign domestic hosting in France makes the platform more secure. Limit your answer to 400 words.}
 
 \paragraph{Claims checked.}
 The AI has no invented numbers. That S3NS operates PREMI3NS alone and checks all updates is correct \parencite{s3ns2025premi3ns}. That a qualified cloud does not make the applications on it secure is also correct \parencite{anssi_faq}. On sovereign hostingit claims that validation updates can cause delays ehich is reasonable according to the fact that S3NS use a few days to check every update \cite{paperjam2026}. 
@@ -140,7 +140,7 @@ the platform, and it did not invent any probabilities or costs. It was weaker on
 AI mentions that SecNumCloud gives protection against non-european regulations which is correct according to \parencite{s3ns2025premi3ns}. It correctly mentions a positive network effect between clients and vendors. It also claims that S3NS is dependent of google for its technology which we also agree in. 
 
 \paragraph{Errors found and corrected.}
-The AI lists only clients as customers. PREMI3NS has two groups which use the platform, both clients and vendors. We have therefore added vendors as a second customer group. 
+The AI lists only clients as customers. PREMI3NS has two groups which use the platform, both clients and vendors. Direct contact between user groups is what separates a multisided platform from a reseller \parencite[slide 40]{windekilde2026msp}, which is why we have added vendors as a second customer group. 
 
 The Ai generated draft also lists ANSSI as a key partner, but we argue that since it approes the service it is a regulator. ANSSI do not fit in any of the four groups of partnerships as of \parencite[p.~38]{osterwalder2010}. The SRM include the organisation, its customer segments and key partners \parencite[slide 30]{windekilde2026}, which is why we have not included ANSSI. 
 
