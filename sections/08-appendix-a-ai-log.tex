@@ -113,14 +113,14 @@ The answer invents no prices. It leaves the premium unquantified, although the S
 \aiprompt{ChatGPT, 6.1, 04/10/2026}{S3NS is a trusted cloud alliance between Thales and Google Cloud. S3NS is a French company fully controlled by Thales, and it operates the PREMI3NS cloud service for French public-sector and regulated private-sector clients, using licensed Google Cloud technology. PREMI3NS holds the SecNumCloud qualification from ANSSI. Software vendors and integration partners also run services on the platform. Treat platform security as a good provided jointly by the alliance partners. Explain how cybersecurity responsibility and investment should be allocated between Thales/S3NS and Google Cloud, and which parts of the attack surface each partner controls. Identify who would bear the losses if the platform were breached. Finally, assess whether sovereign domestic hosting in France makes the platform more secure. Limit your answer to 400 words.}
 
 \paragraph{Claims checked.}
-The AI has no invented numbers. That S3NS operates PREMI3NS alone and checks all updates is correct \parencite{s3ns2025premi3ns}. That a qualified cloud does not make the applications on it secure is also correct \parencite{anssi_faq}. On sovereign hostingit claims that validation updates can cause delays ehich is reasonable according to the fact that S3NS use a few days to check every update \cite{paperjam2026}. 
+The AI has no invented numbers. That S3NS operates PREMI3NS alone and checks all updates is correct \parencite{s3ns2025premi3ns}. That a qualified cloud does not make the applications on it secure is also correct \parencite{anssi_faq}. On sovereign hosting it claims that validation updates can cause delays ehich is reasonable according to the fact that S3NS use a few days to check every update \cite{paperjam2026}. 
 
 \paragraph{Errors found and corrected.}
-First, the AI says the partner with the lowest cost should invest. This only works for total effort or best shot \parencite[p.~1--2]{varian2004}, We argue that most of PREMI3NS is weakest link, where the least protected participant decides the security \parencite[slide 21]{kianpour2026slides}.
+First, the AI says investment should go to whoever can reduce losses at the
+lowest marginal cost. This mainly works for total effort or best shot \parencite[p.~1--2]{varian2004}, We argue that most of PREMI3NS is weakest link, where the least protected participant decides the security \parencite[slide 21]{kianpour2026slides}.
 
-Second, the AI lists the losses of clients, end users and society, but relies on
-contracts between the partners to allocate them. These actors are not part of those
-contracts, so their losses are never internalised. Each partner weighs only its own
+Second, the AI mentions that the partners may underinvest, and it proposes contracts between the partners. But end users are not part of those
+contracts, so their losses are never internalized. Each partner weighs only its own
 loss, and together they therefore spend less than the social optimum would suggest
 \parencite[slide 15]{kianpour2026slides}.
 
@@ -129,7 +129,7 @@ Third, the AI misses that vendors lose the least and are the subsidised side (Se
 Fourth, the AI says Google loses licence revenue without a source. We marked this as an assumption.
 
 \paragraph{Reflection}. The AI was useful in structuring which partner controls which part of
-the platform, and it did not invent any probabilities or costs. It was weaker on the economics. It did not classify provision structure properly and somehow missed on the weakest-link logic. It also did not address the vendors incentives properly. 
+the platform, and it did not invent any probabilities or costs. It was weaker on the economics. It did not classify provision structure properly and it did not use the weakest link logic when allocating investments. It also did not address the vendors incentives properly. 
 
 % =====================================================================
 \subsection{Task 5: Business Model Structure}
