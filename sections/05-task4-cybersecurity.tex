@@ -12,13 +12,12 @@ On a shared platform, security can be a complex but important part. This section
 Efforts in security can be combined in three ways. Total effort is the sum
 of individual security efforts, weakest link is set by the least protected
 entity and best shot depends on the maximum effort \parencite[p.~1]{varian2004}. For PREMI3NS, the core infrastructure is
-close to best shot. The software is Google´s and every
-update gets analysed and validated by S3NS before it is deployed
-\parencite{s3ns2025premi3ns}. Every client on the platform relies on the same core, meaning one provider sets the security level for all. This also mean that if the core fails, everyone fails. \parencite[slide 23]{kianpour2026slides}.
+close to best shot. The software is Google's, but S3NS checks and approves every update before it
+goes into production \parencite{s3ns2025premi3ns}. Every client on the platform relies on the same core, meaning one provider sets the security level for all. This also mean that if the core fails, everyone fails. \parencite[slide 23]{kianpour2026slides}.
 
 The identity and operations layer is considered closer to a weakest link. One compromised administrator account or a badly configured access policy can open the system to attack regardless of the strength of the rest of the platform. Shared identity and login systems are a typical weakest link setting \parencite[slide 21]{kianpour2026slides}.
 
-Client organisations connected to a common platform are also a typical
+Clients connected to a shared platform are also a typical
 weakest-link setting \parencite[slide 21]{kianpour2026slides}, and this
 applies to PREMI3NS. Each client is responsible for the security of its own
 tenant, which is its separate area on the platform. Vendors are even more
